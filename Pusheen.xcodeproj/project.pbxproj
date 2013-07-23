@@ -31,6 +31,20 @@
 			remoteGlobalIDString = 836CA9D5179DD43500E365FD;
 			remoteInfo = Pusheen;
 		};
+		F8330666179EE06C00210388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8330661179EE06C00210388 /* PSHUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F833062F179EE06C00210388;
+			remoteInfo = PSHUI;
+		};
+		F8330668179EE06C00210388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8330661179EE06C00210388 /* PSHUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F833064A179EE06C00210388;
+			remoteInfo = PSHUITests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +67,8 @@
 		836CAA00179DD43600E365FD /* PusheenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PusheenTests-Info.plist"; sourceTree = "<group>"; };
 		836CAA02179DD43600E365FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		836CAA04179DD43600E365FD /* PusheenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PusheenTests.m; sourceTree = "<group>"; };
+		F8330661179EE06C00210388 /* PSHUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PSHUI.xcodeproj; path = PSHUI/PSHUI.xcodeproj; sourceTree = "<group>"; };
+		F8330672179EE16C00210388 /* PSHData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PSHData.xcodeproj; path = PSHData/PSHData.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,8 @@
 		836CA9CD179DD43500E365FD = {
 			isa = PBXGroup;
 			children = (
+				F8330672179EE16C00210388 /* PSHData.xcodeproj */,
+				F8330661179EE06C00210388 /* PSHUI.xcodeproj */,
 				836CA9DF179DD43500E365FD /* Pusheen */,
 				836CA9FE179DD43600E365FD /* PusheenTests */,
 				836CA9D8179DD43500E365FD /* Frameworks */,
@@ -152,6 +170,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F8330662179EE06C00210388 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8330667179EE06C00210388 /* PSHUI.app */,
+				F8330669179EE06C00210388 /* PSHUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8330673179EE16C00210388 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +253,16 @@
 			mainGroup = 836CA9CD179DD43500E365FD;
 			productRefGroup = 836CA9D7179DD43500E365FD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F8330673179EE16C00210388 /* Products */;
+					ProjectRef = F8330672179EE16C00210388 /* PSHData.xcodeproj */;
+				},
+				{
+					ProductGroup = F8330662179EE06C00210388 /* Products */;
+					ProjectRef = F8330661179EE06C00210388 /* PSHUI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				836CA9D5179DD43500E365FD /* Pusheen */,
@@ -226,6 +270,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F8330667179EE06C00210388 /* PSHUI.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = PSHUI.app;
+			remoteRef = F8330666179EE06C00210388 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8330669179EE06C00210388 /* PSHUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PSHUITests.xctest;
+			remoteRef = F8330668179EE06C00210388 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		836CA9D4179DD43500E365FD /* Resources */ = {
@@ -460,6 +521,7 @@
 				836CAA0A179DD43600E365FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		836CAA0B179DD43600E365FD /* Build configuration list for PBXNativeTarget "PusheenTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +530,7 @@
 				836CAA0D179DD43600E365FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
