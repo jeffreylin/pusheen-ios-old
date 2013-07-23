@@ -107,6 +107,8 @@
 		F8330638179EE06C00210388 /* PSHUI */ = {
 			isa = PBXGroup;
 			children = (
+				F8B0A59A179F24B5004112A5 /* ViewControllers */,
+				F8B0A599179F249B004112A5 /* Views */,
 				F8330641179EE06C00210388 /* PSHAppDelegate.h */,
 				F8330642179EE06C00210388 /* PSHAppDelegate.m */,
 				F8330644179EE06C00210388 /* Images.xcassets */,
@@ -143,6 +145,20 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		F8B0A599179F249B004112A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		F8B0A59A179F24B5004112A5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -359,6 +375,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PSHUI/PSHUI-Prefix.pch";
 				INFOPLIST_FILE = "PSHUI/PSHUI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -372,6 +389,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PSHUI/PSHUI-Prefix.pch";
 				INFOPLIST_FILE = "PSHUI/PSHUI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -436,6 +454,7 @@
 				F833065D179EE06C00210388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F833065E179EE06C00210388 /* Build configuration list for PBXNativeTarget "PSHUITests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +463,7 @@
 				F8330660179EE06C00210388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
