@@ -77,6 +77,9 @@
 		646ED589179F3B9600BF997C = {
 			isa = PBXGroup;
 			children = (
+				646ED608179F3F1600BF997C /* PSGraphView */,
+				646ED607179F3DC200BF997C /* PSUIKit */,
+				646ED606179F3DAF00BF997C /* PSDayView */,
 				646ED59B179F3B9600BF997C /* PSFrontend */,
 				646ED5B4179F3B9600BF997C /* PSFrontendTests */,
 				646ED594179F3B9600BF997C /* Frameworks */,
@@ -142,6 +145,27 @@
 				646ED5B7179F3B9600BF997C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		646ED606179F3DAF00BF997C /* PSDayView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PSDayView;
+			sourceTree = "<group>";
+		};
+		646ED607179F3DC200BF997C /* PSUIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PSUIKit;
+			sourceTree = "<group>";
+		};
+		646ED608179F3F1600BF997C /* PSGraphView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PSGraphView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
