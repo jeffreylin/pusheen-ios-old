@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ACD89140-B343-4406-9F94-3D04ABD59BA8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pusheen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A3E74FBD-B038-4A77-BC5A-961E4B0D4562</key>
+		<string>ssh://github.com/jeffreylin/pusheen-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pusheen.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A3E74FBD-B038-4A77-BC5A-961E4B0D4562</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/jeffreylin/pusheen-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A3E74FBD-B038-4A77-BC5A-961E4B0D4562</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A3E74FBD-B038-4A77-BC5A-961E4B0D4562</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pusheen-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -24,6 +24,9 @@
 		646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED60D179F48B700BF997C /* PSNavigationController.m */; };
 		646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */; };
 		648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */; };
+		F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */; };
+		F8C98BCC17A05C4E00059BF4 /* PSFeedStoryContent.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BC817A05C4E00059BF4 /* PSFeedStoryContent.m */; };
+		F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +66,12 @@
 		646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionTableViewCell.m; sourceTree = "<group>"; };
 		648A045017A04A3800DD0250 /* UIColor+PSUIColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PSUIColorPalette.h"; sourceTree = "<group>"; };
 		648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PSUIColorPalette.m"; sourceTree = "<group>"; };
-		F849E20117A042D90093724D /* PSFeedStoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryCell.h; path = ../../Documents/PSFrontend/PSFeedStoryCell.h; sourceTree = "<group>"; };
-		F849E20217A042D90093724D /* PSFeedStoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryCell.m; path = ../../Documents/PSFrontend/PSFeedStoryCell.m; sourceTree = "<group>"; };
-		F849E20317A042D90093724D /* PSFeedStoryContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryContent.h; path = ../../Documents/PSFrontend/PSFeedStoryContent.h; sourceTree = "<group>"; };
-		F849E20417A042D90093724D /* PSFeedStoryContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryContent.m; path = ../../Documents/PSFrontend/PSFeedStoryContent.m; sourceTree = "<group>"; };
-		F849E20517A042D90093724D /* PSFeedStoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryHeader.h; path = ../../Documents/PSFrontend/PSFeedStoryHeader.h; sourceTree = "<group>"; };
-		F849E20617A042D90093724D /* PSFeedStoryHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryHeader.m; path = ../../Documents/PSFrontend/PSFeedStoryHeader.m; sourceTree = "<group>"; };
+		F8C98BC517A05C4E00059BF4 /* PSFeedStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedStoryCell.h; sourceTree = "<group>"; };
+		F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedStoryCell.m; sourceTree = "<group>"; };
+		F8C98BC717A05C4E00059BF4 /* PSFeedStoryContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedStoryContent.h; sourceTree = "<group>"; };
+		F8C98BC817A05C4E00059BF4 /* PSFeedStoryContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedStoryContent.m; sourceTree = "<group>"; };
+		F8C98BC917A05C4E00059BF4 /* PSFeedStoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedStoryHeader.h; sourceTree = "<group>"; };
+		F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedStoryHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,12 +206,12 @@
 		F849E20717A042F70093724D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F849E20517A042D90093724D /* PSFeedStoryHeader.h */,
-				F849E20317A042D90093724D /* PSFeedStoryContent.h */,
-				F849E20417A042D90093724D /* PSFeedStoryContent.m */,
-				F849E20217A042D90093724D /* PSFeedStoryCell.m */,
-				F849E20617A042D90093724D /* PSFeedStoryHeader.m */,
-				F849E20117A042D90093724D /* PSFeedStoryCell.h */,
+				F8C98BC517A05C4E00059BF4 /* PSFeedStoryCell.h */,
+				F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */,
+				F8C98BC717A05C4E00059BF4 /* PSFeedStoryContent.h */,
+				F8C98BC817A05C4E00059BF4 /* PSFeedStoryContent.m */,
+				F8C98BC917A05C4E00059BF4 /* PSFeedStoryHeader.h */,
+				F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -312,7 +315,10 @@
 				646ED5A2179F3B9600BF997C /* main.m in Sources */,
 				646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */,
 				646ED60B179F464F00BF997C /* PSGraphSelectionTableViewController.m in Sources */,
+				F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */,
 				646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */,
+				F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */,
+				F8C98BCC17A05C4E00059BF4 /* PSFeedStoryContent.m in Sources */,
 				648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */,
 				646ED5A6179F3B9600BF997C /* PSAppDelegate.m in Sources */,
 				288D618217A055D100382924 /* PSTableViewController.m in Sources */,
