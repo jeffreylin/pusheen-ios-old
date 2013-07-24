@@ -10,13 +10,15 @@
 
 @interface PSTableViewController ()
 
+@property(nonatomic, retain) UIColor *separatorColor;
+
 @end
 
 @implementation PSTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
     }
@@ -26,7 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
+ 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
