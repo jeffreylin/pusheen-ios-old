@@ -13,13 +13,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Create our new window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
+    //Make a navigation controller, and then set it to the TableViewController.
     PSTableViewController *tableViewController = [[PSTableViewController alloc] init];
-    [[self window] setRootViewController:tableViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    [[self window] setRootViewController:navigationController];
     
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -52,3 +53,6 @@
 }
 
 @end
+
+
+
