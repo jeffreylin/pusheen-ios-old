@@ -7,6 +7,7 @@
 //
 
 #import "PSTableViewController.h"
+#import "UIColor+PSUIColorPalette.h"
 
 @interface PSTableViewController ()
 
@@ -28,10 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.tableView setSeparatorColor:[UIColor clearColor]];
-    
     self.title = @"JULY 31 2013";
+    [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

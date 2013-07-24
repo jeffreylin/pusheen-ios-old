@@ -18,14 +18,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self.navigationBar setBackgroundColor:[UIColor blackColor]];
     [self.navigationBar setOpaque:YES];
 
     [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            UITextAttributeFont: [UIFont fontWithName:@"Helvetica Neue" size:24.0f],
+                                                            UITextAttributeFont: [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0f],
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
                                                             }];
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning
