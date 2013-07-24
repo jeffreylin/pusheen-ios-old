@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		288D618017A055D100382924 /* PSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTableViewController.h; sourceTree = "<group>"; };
-		288D618117A055D100382924 /* PSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTableViewController.m; sourceTree = "<group>"; };
+		288D618017A055D100382924 /* PSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSTableViewController.h; path = PSFrontend/PSTableViewController.h; sourceTree = "<group>"; };
+		288D618117A055D100382924 /* PSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSTableViewController.m; path = PSFrontend/PSTableViewController.m; sourceTree = "<group>"; };
 		646ED592179F3B9600BF997C /* PSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646ED595179F3B9600BF997C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		646ED597179F3B9600BF997C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,8 +138,6 @@
 				646ED5A5179F3B9600BF997C /* PSAppDelegate.m */,
 				646ED60C179F48B700BF997C /* PSNavigationController.h */,
 				646ED60D179F48B700BF997C /* PSNavigationController.m */,
-				288D618017A055D100382924 /* PSTableViewController.h */,
-				288D618117A055D100382924 /* PSTableViewController.m */,
 				646ED5A7179F3B9600BF997C /* Images.xcassets */,
 				646ED59C179F3B9600BF997C /* Supporting Files */,
 			);
@@ -178,6 +176,8 @@
 		646ED606179F3DAF00BF997C /* PSDayView */ = {
 			isa = PBXGroup;
 			children = (
+				288D618017A055D100382924 /* PSTableViewController.h */,
+				288D618117A055D100382924 /* PSTableViewController.m */,
 				F849E20717A042F70093724D /* Cells */,
 			);
 			name = PSDayView;
