@@ -118,7 +118,6 @@
 				646ED5E1179F3BB100BF997C /* PSAppDelegate.h */,
 				646ED5E2179F3BB100BF997C /* PSAppDelegate.m */,
 				646ED5E7179F3BB100BF997C /* Images.xcassets */,
-				646ED5E4179F3BB100BF997C /* PSBackend.xcdatamodeld */,
 				646ED5D9179F3BB100BF997C /* Supporting Files */,
 			);
 			path = PSBackend;
@@ -127,6 +126,7 @@
 		646ED5D9179F3BB100BF997C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				646ED5E4179F3BB100BF997C /* PSBackend.xcdatamodeld */,
 				646ED5DA179F3BB100BF997C /* PSBackend-Info.plist */,
 				646ED5DB179F3BB100BF997C /* InfoPlist.strings */,
 				646ED5DE179F3BB100BF997C /* main.m */,
@@ -448,6 +448,7 @@
 				646ED601179F3BB100BF997C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		646ED602179F3BB100BF997C /* Build configuration list for PBXNativeTarget "PSBackendTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +457,7 @@
 				646ED604179F3BB100BF997C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

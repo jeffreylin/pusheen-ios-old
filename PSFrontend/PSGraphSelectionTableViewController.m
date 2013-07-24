@@ -60,7 +60,7 @@
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    cell.backgroundColor = [UIColor redColor];
     // Configure the cell...
     
     return cell;

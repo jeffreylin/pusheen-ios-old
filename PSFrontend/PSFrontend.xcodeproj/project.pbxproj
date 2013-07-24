@@ -83,10 +83,10 @@
 		646ED589179F3B9600BF997C = {
 			isa = PBXGroup;
 			children = (
+				646ED59B179F3B9600BF997C /* PSFrontend */,
 				646ED608179F3F1600BF997C /* PSGraphView */,
 				646ED607179F3DC200BF997C /* PSUIKit */,
 				646ED606179F3DAF00BF997C /* PSDayView */,
-				646ED59B179F3B9600BF997C /* PSFrontend */,
 				646ED5B4179F3B9600BF997C /* PSFrontendTests */,
 				646ED594179F3B9600BF997C /* Frameworks */,
 				646ED593179F3B9600BF997C /* Products */,
@@ -118,10 +118,10 @@
 			children = (
 				646ED5A4179F3B9600BF997C /* PSAppDelegate.h */,
 				646ED5A5179F3B9600BF997C /* PSAppDelegate.m */,
-				646ED5A7179F3B9600BF997C /* Images.xcassets */,
-				646ED59C179F3B9600BF997C /* Supporting Files */,
 				646ED60C179F48B700BF997C /* PSNavigationController.h */,
 				646ED60D179F48B700BF997C /* PSNavigationController.m */,
+				646ED5A7179F3B9600BF997C /* Images.xcassets */,
+				646ED59C179F3B9600BF997C /* Supporting Files */,
 			);
 			path = PSFrontend;
 			sourceTree = "<group>";
@@ -474,6 +474,7 @@
 				646ED5C0179F3B9600BF997C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		646ED5C1179F3B9600BF997C /* Build configuration list for PBXNativeTarget "PSFrontendTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +483,7 @@
 				646ED5C3179F3B9600BF997C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
