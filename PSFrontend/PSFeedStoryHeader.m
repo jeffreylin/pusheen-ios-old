@@ -8,17 +8,21 @@
 
 #import "PSFeedStoryHeader.h"
 
+@interface PSFeedStoryHeader()
+
+@end
+
 @implementation PSFeedStoryHeader
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        self.typeOfContent = TEXT_ENTRY;
     }
     return self;
 }
-
+- (void)
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

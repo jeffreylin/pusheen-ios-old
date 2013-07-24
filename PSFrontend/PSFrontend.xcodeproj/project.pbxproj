@@ -24,6 +24,7 @@
 		646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED60D179F48B700BF997C /* PSNavigationController.m */; };
 		646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */; };
 		648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */; };
+		F8479EB217A0936A000F68F8 /* PSHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */; };
 		F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */; };
 		F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,8 @@
 		646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionTableViewCell.m; sourceTree = "<group>"; };
 		648A045017A04A3800DD0250 /* UIColor+PSUIColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PSUIColorPalette.h"; sourceTree = "<group>"; };
 		648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PSUIColorPalette.m"; sourceTree = "<group>"; };
+		F8479EB017A0936A000F68F8 /* PSHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHeaderViewController.h; sourceTree = "<group>"; };
+		F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSHeaderViewController.m; sourceTree = "<group>"; };
 		F8C98BC517A05C4E00059BF4 /* PSFeedStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedStoryCell.h; sourceTree = "<group>"; };
 		F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedStoryCell.m; sourceTree = "<group>"; };
 		F8C98BC917A05C4E00059BF4 /* PSFeedStoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedStoryHeader.h; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 			children = (
 				F8C98BC517A05C4E00059BF4 /* PSFeedStoryCell.h */,
 				F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */,
+				F8479EB017A0936A000F68F8 /* PSHeaderViewController.h */,
+				F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */,
 				F8C98BC917A05C4E00059BF4 /* PSFeedStoryHeader.h */,
 				F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */,
 			);
@@ -309,6 +314,7 @@
 			files = (
 				646ED5A2179F3B9600BF997C /* main.m in Sources */,
 				646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */,
+				F8479EB217A0936A000F68F8 /* PSHeaderViewController.m in Sources */,
 				646ED60B179F464F00BF997C /* PSGraphSelectionTableViewController.m in Sources */,
 				F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */,
 				646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */,

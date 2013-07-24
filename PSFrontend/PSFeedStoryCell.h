@@ -14,6 +14,7 @@ typedef enum {
 }contentType;
 @interface PSFeedStoryCell : UITableViewCell
 @property BOOL isEditable;
+@property enum contentType typeOfContent;
 @property PSFeedStoryHeader* header;
 @property UIView* content;
 @end
