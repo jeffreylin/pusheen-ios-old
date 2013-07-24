@@ -18,13 +18,14 @@
     //Create our new window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+    //Temporary: comment out one of the lines to switch between Feed View and Table View.
     PSTableViewController *feedTableViewController = [[PSTableViewController alloc] init];
     PSGraphSelectionTableViewController *graphSelectionTableViewController = [[PSGraphSelectionTableViewController alloc] init];
-
-    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphSelectionTableViewController];
+    
+    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
+    //PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphSelectionTableViewController];
 
     [[self window] setRootViewController:navController];
-    
     [self.window makeKeyAndVisible];
     return YES;
 }

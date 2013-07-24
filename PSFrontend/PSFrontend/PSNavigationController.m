@@ -7,6 +7,7 @@
 //
 
 #import "PSNavigationController.h"
+#import "UIColor+PSUIColorPalette.h"
 
 @interface PSNavigationController ()
 
@@ -17,7 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    //[self.navigationBar setBackgroundColor:[UIColor blackColor]];
+    [self.navigationBar setOpaque:YES];
+
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                                            UITextAttributeFont: [UIFont fontWithName:@"Helvetica Neue" size:24.0f],
+                                                            UITextAttributeTextColor: [UIColor navigationBarTitleColor],
+                                                            }];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor blackColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,3 +35,10 @@
 }
 
 @end
+
+/*
+Configuring Navigation Bars
+navigationBar  property
+navigationBarHidden  property
+– setNavigationBarHidden:animated:
+*/

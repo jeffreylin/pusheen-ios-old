@@ -30,7 +30,9 @@
     [super viewDidLoad];
     
     [self.tableView setSeparatorColor:[UIColor clearColor]];
- 
+    
+    self.title = @"JULY 31 2013";
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -48,14 +50,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of cell we want.
     return 10;
 }
