@@ -7,6 +7,12 @@
 //
 
 #import "PSGraphSelectionTableViewController.h"
+#import "PSGraphSelectionTableViewCell.h"
+
+static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
+
+
+
 
 @interface PSGraphSelectionTableViewController ()
 
@@ -18,7 +24,9 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
+        CGRect currentFrame = [[self tableView] frame];
+//        [self tableView]
     }
     return self;
 }
@@ -45,23 +53,30 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
-    // Configure the cell...
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+//    cell.backgroundColor = [UIColor redColor];
+    cell.textLabel.text = @"Hello World!";
+
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+
 }
 
 /*
