@@ -7,7 +7,9 @@
 //
 
 #import "PSAppDelegate.h"
+#import "PSNavigationController.h"
 #import "PSTableViewController.h"
+#import "PSGraphSelectionTableViewController.h"
 
 @implementation PSAppDelegate
 
@@ -15,11 +17,13 @@
 {
     //Create our new window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    //Make a navigation controller, and then set it to the TableViewController.
-    PSTableViewController *tableViewController = [[PSTableViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
-    [[self window] setRootViewController:navigationController];
+
+    PSTableViewController *feedTableViewController = [[PSTableViewController alloc] init];
+    PSGraphSelectionTableViewController *graphSelectionTableViewController = [[PSGraphSelectionTableViewController alloc] init];
+
+    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphSelectionTableViewController];
+
+    [[self window] setRootViewController:navController];
     
     [self.window makeKeyAndVisible];
     return YES;
