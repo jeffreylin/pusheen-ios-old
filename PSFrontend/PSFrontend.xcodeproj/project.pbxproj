@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288D618217A055D100382924 /* PSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288D618117A055D100382924 /* PSTableViewController.m */; };
 		646ED596179F3B9600BF997C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED595179F3B9600BF997C /* Foundation.framework */; };
 		646ED598179F3B9600BF997C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED597179F3B9600BF997C /* CoreGraphics.framework */; };
 		646ED59A179F3B9600BF997C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED599179F3B9600BF997C /* UIKit.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		288D618017A055D100382924 /* PSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTableViewController.h; sourceTree = "<group>"; };
+		288D618117A055D100382924 /* PSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTableViewController.m; sourceTree = "<group>"; };
 		646ED592179F3B9600BF997C /* PSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646ED595179F3B9600BF997C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		646ED597179F3B9600BF997C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,14 +61,14 @@
 		646ED60D179F48B700BF997C /* PSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSNavigationController.m; sourceTree = "<group>"; };
 		646ED60F179F4BA100BF997C /* PSGraphSelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphSelectionTableViewCell.h; sourceTree = "<group>"; };
 		646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionTableViewCell.m; sourceTree = "<group>"; };
+		648A045017A04A3800DD0250 /* UIColor+PSUIColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PSUIColorPalette.h"; sourceTree = "<group>"; };
+		648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PSUIColorPalette.m"; sourceTree = "<group>"; };
 		F849E20117A042D90093724D /* PSFeedStoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryCell.h; path = ../../Documents/PSFrontend/PSFeedStoryCell.h; sourceTree = "<group>"; };
 		F849E20217A042D90093724D /* PSFeedStoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryCell.m; path = ../../Documents/PSFrontend/PSFeedStoryCell.m; sourceTree = "<group>"; };
 		F849E20317A042D90093724D /* PSFeedStoryContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryContent.h; path = ../../Documents/PSFrontend/PSFeedStoryContent.h; sourceTree = "<group>"; };
 		F849E20417A042D90093724D /* PSFeedStoryContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryContent.m; path = ../../Documents/PSFrontend/PSFeedStoryContent.m; sourceTree = "<group>"; };
 		F849E20517A042D90093724D /* PSFeedStoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryHeader.h; path = ../../Documents/PSFrontend/PSFeedStoryHeader.h; sourceTree = "<group>"; };
 		F849E20617A042D90093724D /* PSFeedStoryHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryHeader.m; path = ../../Documents/PSFrontend/PSFeedStoryHeader.m; sourceTree = "<group>"; };
-		648A045017A04A3800DD0250 /* UIColor+PSUIColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PSUIColorPalette.h"; sourceTree = "<group>"; };
-		648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PSUIColorPalette.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				646ED5A5179F3B9600BF997C /* PSAppDelegate.m */,
 				646ED60C179F48B700BF997C /* PSNavigationController.h */,
 				646ED60D179F48B700BF997C /* PSNavigationController.m */,
+				288D618017A055D100382924 /* PSTableViewController.h */,
+				288D618117A055D100382924 /* PSTableViewController.m */,
 				646ED5A7179F3B9600BF997C /* Images.xcassets */,
 				646ED59C179F3B9600BF997C /* Supporting Files */,
 			);
@@ -310,6 +315,7 @@
 				646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */,
 				648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */,
 				646ED5A6179F3B9600BF997C /* PSAppDelegate.m in Sources */,
+				288D618217A055D100382924 /* PSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

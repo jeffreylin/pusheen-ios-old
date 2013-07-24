@@ -7,6 +7,7 @@
 //
 
 #import "PSAppDelegate.h"
+#import "PSTableViewController.h"
 
 @implementation PSAppDelegate
 
@@ -14,6 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    PSTableViewController *tableViewController = [[PSTableViewController alloc] init];
+    [[self window] setRootViewController:tableViewController];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
