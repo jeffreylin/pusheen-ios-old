@@ -9,8 +9,7 @@
 #import "PSFeedStoryCell.h"
 #import "PSFeedStoryHeader.h"
 @interface PSFeedStoryCell()
-@property PSFeedStoryHeader* header;
-@property UIView* content;
+
 @end
 
 @implementation PSFeedStoryCell
