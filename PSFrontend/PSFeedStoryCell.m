@@ -12,7 +12,7 @@
 }
 @interface PSFeedStoryCell()
 @property UIStoryHeader header;
-@property UIStoryContent content;
+@property UIView content;
 @end
 
 @implementation PSFeedStoryCell
