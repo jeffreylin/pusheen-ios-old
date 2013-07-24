@@ -7,12 +7,10 @@
 //
 
 #import "PSFeedStoryCell.h"
-{
-    
-}
+#import "PSFeedStoryHeader.h"
 @interface PSFeedStoryCell()
-@property UIStoryHeader header;
-@property UIView content;
+@property PSFeedStoryHeader* header;
+@property UIView* content;
 @end
 
 @implementation PSFeedStoryCell
