@@ -2,9 +2,15 @@
 <Workspace
    version = "1.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
    <FileRef
       location = "self:PSFrontend.xcodeproj">
    </FileRef>
 >>>>>>> Fixed PSUIColorPalette to make it a category of UIColor.
+=======
+   <FileRef
+      location = "self:PSFrontend.xcodeproj">
+   </FileRef>
+>>>>>>> Added framework classes for Cells
 </Workspace>

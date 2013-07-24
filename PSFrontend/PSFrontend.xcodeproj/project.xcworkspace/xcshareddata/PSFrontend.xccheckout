@@ -3,18 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>D148B086-726C-443C-A277-13CB18EDEF1E</string>
+=======
+	<string>1B16BD70-F7D8-4F31-84F0-0C52E314AB7E</string>
+>>>>>>> Added framework classes for Cells
 	<key>IDESourceControlProjectName</key>
 	<string>PSFrontend</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>C698A97A-9D44-4F3C-94FF-E621D5D1DE94</key>
 		<string>ssh://github.com/jeffreylin/pusheen-ios.git</string>
+=======
+		<key>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</key>
+		<string>https://github.com/jeffreylin/pusheen-ios.git</string>
+>>>>>>> Added framework classes for Cells
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PSFrontend/PSFrontend.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
 		<key>C698A97A-9D44-4F3C-94FF-E621D5D1DE94</key>
 		<string>../../..</string>
 	</dict>
@@ -24,15 +34,32 @@
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>C698A97A-9D44-4F3C-94FF-E621D5D1DE94</string>
+=======
+		<key>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jeffreylin/pusheen-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</string>
+>>>>>>> Added framework classes for Cells
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
 			<string>C698A97A-9D44-4F3C-94FF-E621D5D1DE94</string>
 			<key>IDESourceControlWCCName</key>
 			<string>pusheen-ios</string>
+=======
+			<string>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pusheen</string>
+>>>>>>> Added framework classes for Cells
 		</dict>
 	</array>
 </dict>

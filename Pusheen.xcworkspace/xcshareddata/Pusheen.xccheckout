@@ -3,56 +3,36 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-<<<<<<< HEAD
-	<string>7CC3541C-496F-4A8B-B1F8-512E2701339C</string>
-=======
-	<string>4B0E2F61-F2E3-4B6A-9B6A-C8A8207B956C</string>
->>>>>>> Fixed PSUIColorPalette to make it a category of UIColor.
+	<string>507E1866-D769-462D-9C8C-2BB1BA15C2C6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Pusheen</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>E58DF0CF-E3B2-4C4C-B452-9A2F2EE356B7</key>
-=======
-		<key>D191BEBB-9571-4A6C-B279-E689DADF6DCB</key>
->>>>>>> Fixed PSUIColorPalette to make it a category of UIColor.
-		<string>ssh://github.com/jeffreylin/pusheen-ios.git</string>
+		<key>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</key>
+		<string>https://github.com/jeffreylin/pusheen-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Pusheen.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-<<<<<<< HEAD
-		<key>E58DF0CF-E3B2-4C4C-B452-9A2F2EE356B7</key>
-=======
-		<key>D191BEBB-9571-4A6C-B279-E689DADF6DCB</key>
->>>>>>> Fixed PSUIColorPalette to make it a category of UIColor.
+		<key>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/jeffreylin/pusheen-ios.git</string>
+	<string>https://github.com/jeffreylin/pusheen-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-<<<<<<< HEAD
-	<string>E58DF0CF-E3B2-4C4C-B452-9A2F2EE356B7</string>
-=======
-	<string>D191BEBB-9571-4A6C-B279-E689DADF6DCB</string>
->>>>>>> Fixed PSUIColorPalette to make it a category of UIColor.
+	<string>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-<<<<<<< HEAD
-			<string>E58DF0CF-E3B2-4C4C-B452-9A2F2EE356B7</string>
-=======
-			<string>D191BEBB-9571-4A6C-B279-E689DADF6DCB</string>
->>>>>>> Fixed PSUIColorPalette to make it a category of UIColor.
+			<string>A8DD1973-2E66-4BC0-8665-D19063CDFB7A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>pusheen-ios</string>
+			<string>Pusheen</string>
 		</dict>
 	</array>
 </dict>
