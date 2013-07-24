@@ -8,10 +8,20 @@
 
 #import "PSUIColorPalette.h"
 
+//Colors for Feed view:
+extern UIColor* storyContentTextColor;
+extern UIColor* storyTitleColor;
+extern UIColor* storyDetailColor;
+extern UIColor* newStoryTextColor;
+extern UIColor* viewBackgroundColor;
+extern UIColor* navigationBarTitleColor;
+extern UIColor* navigationBarColor;
+
 @implementation PSUIColorPalette
+
 UIColor* storyContentTextColor(void)
 {
-    return [[UIColor alloc] initWithRed:128 green:128 blue:128 alpha:1.0];
+    return [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:1.0];
 }
 UIColor* storyTitleColor(void)
 {
@@ -19,26 +29,23 @@ UIColor* storyTitleColor(void)
 }
 UIColor* storyDetailColor(void)
 {
-    return [UIColor grayColor];
+    return [[UIColor alloc] initWithRed:119 green:119 blue:119 alpha:1.0];
 }
-UIColor* storyCardBackgroundColor
+UIColor* newStoryTextColor(void)
 {
-    return [UIColor grayColor];
+    return [[UIColor alloc] initWithRed:82 green:130 blue:89 alpha:1.0];
 }
-UIColor* viewBackgroundColor
+UIColor* viewBackgroundColor(void)
 {
-    return [UIColor grayColor];
+    return [[UIColor alloc] initWithRed:48 green:48 blue:48 alpha:1.0];
 }
-UIColor* editTagColor
+UIColor* navigationBarTitleColor(void)
 {
-    return [UIColor grayColor];
+    return [[UIColor alloc] initWithRed:255 green:255 blue:255 alpha:1.0];
 }
-UIColor* navigationBarTitleColor
+UIColor* navigationBarColor(void) //
 {
-    return [UIColor grayColor];
+    return [[UIColor alloc] initWithRed:27 green:27 blue:27 alpha:1.0];
 }
-UIColor* navigationBarColor
-{
-    return [UIColor grayColor];
-}
+
 @end

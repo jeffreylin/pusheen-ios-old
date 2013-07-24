@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+//Colors for Feed view:
 extern UIColor* storyContentTextColor;
 extern UIColor* storyTitleColor;
-//Used for time and place text
 extern UIColor* storyDetailColor;
-extern UIColor* storyCardBackgroundColor;
+extern UIColor* newStoryTextColor;
 extern UIColor* viewBackgroundColor;
-extern UIColor* editTagColor;
 extern UIColor* navigationBarTitleColor;
 extern UIColor* navigationBarColor;
 
