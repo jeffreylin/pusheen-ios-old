@@ -22,7 +22,7 @@
 		646ED60B179F464F00BF997C /* PSGraphSelectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED60A179F464F00BF997C /* PSGraphSelectionTableViewController.m */; };
 		646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED60D179F48B700BF997C /* PSNavigationController.m */; };
 		646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */; };
-		83E69B98179F92A100FBC302 /* PSUIColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E69B97179F92A100FBC302 /* PSUIColorPalette.m */; };
+		648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +58,14 @@
 		646ED60D179F48B700BF997C /* PSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSNavigationController.m; sourceTree = "<group>"; };
 		646ED60F179F4BA100BF997C /* PSGraphSelectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphSelectionTableViewCell.h; sourceTree = "<group>"; };
 		646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionTableViewCell.m; sourceTree = "<group>"; };
-		83E69B96179F92A100FBC302 /* PSUIColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSUIColorPalette.h; sourceTree = "<group>"; };
-		83E69B97179F92A100FBC302 /* PSUIColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSUIColorPalette.m; sourceTree = "<group>"; };
 		F849E20117A042D90093724D /* PSFeedStoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryCell.h; path = ../../Documents/PSFrontend/PSFeedStoryCell.h; sourceTree = "<group>"; };
 		F849E20217A042D90093724D /* PSFeedStoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryCell.m; path = ../../Documents/PSFrontend/PSFeedStoryCell.m; sourceTree = "<group>"; };
 		F849E20317A042D90093724D /* PSFeedStoryContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryContent.h; path = ../../Documents/PSFrontend/PSFeedStoryContent.h; sourceTree = "<group>"; };
 		F849E20417A042D90093724D /* PSFeedStoryContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryContent.m; path = ../../Documents/PSFrontend/PSFeedStoryContent.m; sourceTree = "<group>"; };
 		F849E20517A042D90093724D /* PSFeedStoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PSFeedStoryHeader.h; path = ../../Documents/PSFrontend/PSFeedStoryHeader.h; sourceTree = "<group>"; };
 		F849E20617A042D90093724D /* PSFeedStoryHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PSFeedStoryHeader.m; path = ../../Documents/PSFrontend/PSFeedStoryHeader.m; sourceTree = "<group>"; };
+		648A045017A04A3800DD0250 /* UIColor+PSUIColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PSUIColorPalette.h"; sourceTree = "<group>"; };
+		648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PSUIColorPalette.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +178,8 @@
 		646ED607179F3DC200BF997C /* PSUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				83E69B96179F92A100FBC302 /* PSUIColorPalette.h */,
-				83E69B97179F92A100FBC302 /* PSUIColorPalette.m */,
+				648A045017A04A3800DD0250 /* UIColor+PSUIColorPalette.h */,
+				648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */,
 			);
 			name = PSUIKit;
 			sourceTree = "<group>";
@@ -308,8 +308,8 @@
 				646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */,
 				646ED60B179F464F00BF997C /* PSGraphSelectionTableViewController.m in Sources */,
 				646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */,
+				648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */,
 				646ED5A6179F3B9600BF997C /* PSAppDelegate.m in Sources */,
-				83E69B98179F92A100FBC302 /* PSUIColorPalette.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

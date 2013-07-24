@@ -10,6 +10,6 @@
 
 @interface PSGraphSelectionTableViewCell : UITableViewCell
 
-
+@property (strong, nonatomic) UIColor *color;
 
 @end

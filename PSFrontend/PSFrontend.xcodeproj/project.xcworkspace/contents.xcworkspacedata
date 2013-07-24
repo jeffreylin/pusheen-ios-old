@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+<<<<<<< HEAD
+=======
+   <FileRef
+      location = "self:PSFrontend.xcodeproj">
+   </FileRef>
+>>>>>>> Fixed PSUIColorPalette to make it a category of UIColor.
 </Workspace>
