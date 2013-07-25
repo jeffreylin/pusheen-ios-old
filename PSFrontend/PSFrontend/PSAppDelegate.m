@@ -44,11 +44,7 @@
     [scrollView setContentSize:bigRect.size];
 
     PSDayTableViewController *feedTableViewController = [[PSDayTableViewController alloc] init];
-    PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
-
-    // Comment out to swap between Feed View and Graph View:
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
-    //PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphViewController];
 
     [[self window] setRootViewController:navController];
     [self.window makeKeyAndVisible];

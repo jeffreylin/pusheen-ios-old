@@ -7,7 +7,9 @@
 //
 
 #import "PSGraphViewController.h"
+#import "PSDayTableViewController.h"
 #import "PSGraphSelectionTableViewController.h"
+#import "UIColor+PSUIColorPalette.h"
 
 static CGFloat padding = 12;
 static CGFloat zero = 0.0;
@@ -64,6 +66,29 @@ static CGFloat graphHeight = 212;
     [[self view] addSubview:_paddingView];
     [_paddingView addSubview:_contentView];
     [_contentView addSubview:[_graphSelectionTableViewController tableView]];
+    
+    //Set up Navigation Bar:
+    self.title = @"DATA";
+    
+    [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    UIImage *imgNavLog = [UIImage imageNamed:@"navLog-2"];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.leftBarButtonItem = leftButton;
+    
+    UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings-2"];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+}
+
+- (void)buttonPressed
+{
+    NSLog(@"Switching to Day View.");
+    PSDayTableViewController *dayTableViewController = [[PSDayTableViewController alloc] init];
+    [UIView transitionFromView:self.view toView:dayTableViewController.view duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,3 +98,4 @@ static CGFloat graphHeight = 212;
 }
 
 @end
+

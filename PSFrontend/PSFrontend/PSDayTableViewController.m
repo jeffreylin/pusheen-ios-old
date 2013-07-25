@@ -7,6 +7,7 @@
 //
 
 #import "PSDayTableViewController.h"
+#import "PSGraphViewController.h"
 #import "UIColor+PSUIColorPalette.h"
 
 @interface PSDayTableViewController ()
@@ -42,17 +43,15 @@
     UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings-2"];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
     self.navigationItem.rightBarButtonItem = rightButton;
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)buttonPressed
 {
-    NSLog(@"Ayo! You pressed a button.");
+    NSLog(@"Switching to Graph View.");
+    PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
+    [UIView transitionFromView:self.view toView:graphViewController.view duration:0.5
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
