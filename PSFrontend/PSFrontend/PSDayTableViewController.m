@@ -36,11 +36,11 @@
     [self.navigationController.navigationBar setTranslucent:NO];
     [self.tableView setSeparatorColor:[UIColor clearColor]];
 
-    UIImage *imgNavLog = [UIImage imageNamed:@"navLog-2"];
+    UIImage *imgNavLog = [UIImage imageNamed:@"navLog"];
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
     self.navigationItem.leftBarButtonItem = leftButton;
     
-    UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings-2"];
+    UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings"];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
     self.navigationItem.rightBarButtonItem = rightButton;
 }

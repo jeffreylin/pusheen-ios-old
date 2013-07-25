@@ -2,8 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "thumbCalendar.png"
+    },
+    {
+      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "navSettings@2x.png"
+      "filename" : "thumbCalendar@2x.png"
     }
   ],
   "info" : {

@@ -24,11 +24,7 @@
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
                                                             }];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];
-    
-    // Throws exception in iOS 6 - but keeping the check breaks it in iOS 7
-    //if ([[UINavigationBar appearance] respondsToSelector:@selector(setBarTintColor:)]) {
-        [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
-    //}
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
 }
 
