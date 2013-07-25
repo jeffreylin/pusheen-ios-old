@@ -14,10 +14,7 @@
 
 @implementation PSHeaderViewController
 
-- (id)initWithInformation: 
-{
-    
-}
+
 
 - (void)viewDidLoad
 {
