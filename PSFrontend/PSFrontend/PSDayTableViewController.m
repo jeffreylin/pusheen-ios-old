@@ -9,7 +9,7 @@
 #import "PSDayTableViewController.h"
 #import "PSGraphViewController.h"
 #import "UIColor+PSUIColorPalette.h"
-
+#import "PSFeedStoryCell.h"
 @interface PSDayTableViewController ()
 
 @property(nonatomic, retain) UIColor *separatorColor;
@@ -92,10 +92,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"UITableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PSFeedStoryCell *cell = (PSFeedStoryCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc]
+        cell = [[PSFeedStoryCell alloc]
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:@"UITableViewCell"];
     }
@@ -107,9 +107,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // height of rows
-    return 52.0;
+    return 44.0;
 }
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

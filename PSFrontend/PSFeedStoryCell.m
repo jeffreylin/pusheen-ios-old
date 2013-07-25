@@ -8,6 +8,7 @@
 
 #import "PSFeedStoryCell.h"
 #import "PSFeedStoryHeader.h"
+#import "UIColor+PSUIColorPalette.h"
 
 @interface PSFeedStoryCell()
 
@@ -19,10 +20,9 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.content = [[UIView alloc] initWithFrame: CGRectMake(12, 12, self.frame.size.width - 24, self.frame.size.height - 24)];
-        self.header = [[PSFeedStoryHeader alloc]initWithFrame:self.content.frame]; //NEED TO CHANGE THIS LATER
-        [self.content addSubview: self.header];
-        
+        self.story = [[PSStoryView alloc]initWithFrame:CGRectMake(12, 12, self.frame.size.width - 24, 44.0 - 6)];//Hard coded fix later with autoresizing mask
+        [self setBackgroundColor: [UIColor viewBackgroundColor]];
+        [self addSubview:self.story];
     }
     return self;
 }
@@ -30,7 +30,7 @@
 - (void)setContentType: (contentType)type
 {
     self.typeOfContent = type;
-    [self.header setTypeOfContent:type];
+    [self.story setTypeOfContent:type];
     
 }
 

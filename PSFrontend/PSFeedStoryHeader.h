@@ -12,6 +12,12 @@
 @interface PSFeedStoryHeader : UIView
 @property contentType typeOfContent;
 @property NSString* title;
-@property NSDate* time;
+@property NSDate* timestamp;
 @property NSString* place;
+@property UIImage* thumbnail;
+@property UILabel* titleLabel;
+@property UILabel* timestampLocationLabel;
+@property UIImageView* thumbnailView;
+
+
 @end

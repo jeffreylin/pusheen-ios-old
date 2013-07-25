@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PSFeedStoryHeader.h"
 #import "PSFeedEnums.h"
+#import "PSStoryView.h"
 
 @interface PSFeedStoryCell : UITableViewCell
 @property BOOL isEditable;
+@property PSStoryView* story;
 @property contentType typeOfContent;
-@property PSFeedStoryHeader* header;
-@property UIView* content;
 @end
 

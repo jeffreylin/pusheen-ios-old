@@ -29,6 +29,7 @@
 		646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */; };
 		648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */; };
 		F8479EB217A0936A000F68F8 /* PSHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */; };
+		F85481AD17A1F2CC0013BF2D /* PSStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F85481AC17A1F2CC0013BF2D /* PSStoryView.m */; };
 		F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */; };
 		F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */; };
 		F8F0ADB017A09EB600F8122E /* PSStoryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F0ADAF17A09EB600F8122E /* PSStoryContentViewController.m */; };
@@ -82,6 +83,8 @@
 		83FDCEDB17A0ABAE00B177B9 /* PSFeedEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedEnums.h; sourceTree = "<group>"; };
 		F8479EB017A0936A000F68F8 /* PSHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSHeaderViewController.h; sourceTree = "<group>"; };
 		F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSHeaderViewController.m; sourceTree = "<group>"; };
+		F85481AB17A1F2CC0013BF2D /* PSStoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStoryView.h; sourceTree = "<group>"; };
+		F85481AC17A1F2CC0013BF2D /* PSStoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStoryView.m; sourceTree = "<group>"; };
 		F8C98BC517A05C4E00059BF4 /* PSFeedStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedStoryCell.h; sourceTree = "<group>"; };
 		F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedStoryCell.m; sourceTree = "<group>"; };
 		F8C98BC917A05C4E00059BF4 /* PSFeedStoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedStoryHeader.h; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 			children = (
 				F8C98BC517A05C4E00059BF4 /* PSFeedStoryCell.h */,
 				F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */,
+				F85481AB17A1F2CC0013BF2D /* PSStoryView.h */,
+				F85481AC17A1F2CC0013BF2D /* PSStoryView.m */,
 				F8479EB017A0936A000F68F8 /* PSHeaderViewController.h */,
 				F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */,
 				F8F0ADAE17A09EB600F8122E /* PSStoryContentViewController.h */,
@@ -356,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				646ED5A2179F3B9600BF997C /* main.m in Sources */,
+				F85481AD17A1F2CC0013BF2D /* PSStoryView.m in Sources */,
 				646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */,
 				F8479EB217A0936A000F68F8 /* PSHeaderViewController.m in Sources */,
 				646ED60B179F464F00BF997C /* PSGraphSelectionTableViewController.m in Sources */,

@@ -24,16 +24,7 @@
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
                                                             }];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];
-<<<<<<< HEAD
-    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
-=======
-  
-    // Throws exception in iOS 6 - but keeping the check breaks it in iOS 7
-   // if ([[UINavigationBar appearance] respondsToSelector:@selector(setBarTintColor:)]) {
-        [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
-   // }
-    [self.navigationController.navigationBar setTranslucent:NO];
->>>>>>> Fixed merge conflict between different ios 7 and 6.1
+
 }
 
 - (void)buttonPressed
