@@ -17,23 +17,8 @@
 {
     //Create our new window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
 
-    PSDayTableViewController *feedTableViewController = [[PSDayTableViewController alloc] init];
-
-
-
-    // AppDelegate should probably only contain the navController its rootViewController
-
-
-
-
-
-
-
-
-    
     CGRect screenRect = [[self window] bounds];
     CGRect bigRect = screenRect;
     bigRect.size.width *= 3.0;
@@ -54,17 +39,16 @@
     
     PSTableView *leftView = [[PSTableView alloc] initWithFrame:screenRect];
     [scrollView addSubview:leftView];
-     */
+    */
     
     [scrollView setContentSize:bigRect.size];
 
-
+    PSDayTableViewController *feedTableViewController = [[PSDayTableViewController alloc] init];
     PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
 
-    // Comment out as needed
-    
-//    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
-    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphViewController];
+    // Comment out to swap between Feed View and Graph View:
+    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
+    //PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphViewController];
 
     [[self window] setRootViewController:navController];
     [self.window makeKeyAndVisible];

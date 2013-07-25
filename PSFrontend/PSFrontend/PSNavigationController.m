@@ -24,10 +24,11 @@
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
                                                             }];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];
-    // Throws exception in iOS 6 
-    if ([[UINavigationBar appearance] respondsToSelector:@selector(setBarTintColor:)]) {
+    
+    // Throws exception in iOS 6 - but keeping the check breaks it in iOS 7
+    //if ([[UINavigationBar appearance] respondsToSelector:@selector(setBarTintColor:)]) {
         [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
-    }
+    //}
     [self.navigationController.navigationBar setTranslucent:NO];
 }
 
@@ -43,16 +44,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-
-
 @end
-
-/*
-Configuring Navigation Bars
-navigationBar  property
-navigationBarHidden  property
-– setNavigationBarHidden:animated:
-*/
