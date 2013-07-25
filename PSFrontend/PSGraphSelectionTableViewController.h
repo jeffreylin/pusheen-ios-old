@@ -10,6 +10,5 @@
 
 @interface PSGraphSelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) NSSet *selectedCells;
 
 @end

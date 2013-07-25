@@ -28,6 +28,9 @@ static CGFloat graphHeight = 212;
 
 - (id)init {
     if (self = [super init]) {
+        _selectionContentView = nil;
+        _graphView = nil;
+        _graphSelectionTableViewController = nil;
     }
     return self;
 }
@@ -45,8 +48,8 @@ static CGFloat graphHeight = 212;
 //    CGFloat graphSelectionTableViewHeight = [_graphSelectionTableViewController tableViewHeight];
 
     CGRect graphViewFrame = [[self view] frame];
-    CGRect paddingViewFrame = CGRectMake(zero, zero, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight);
-    CGRect contentViewFrame = CGRectMake(zero, zero + padding, paddingViewFrame.size.width, paddingViewFrame.size.height - padding - paddingViewOriginY);
+    CGRect paddingViewFrame = CGRectMake(zero, zero, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight - tableViewOriginY);
+    CGRect contentViewFrame = CGRectMake(zero, zero + padding, paddingViewFrame.size.width, paddingViewFrame.size.height - padding);
     CGRect graphSelectionTableViewFrame = CGRectMake(zero, zero, contentViewFrame.size.width, contentViewFrame.size.height);
 
     NSLog(@"%@, %@, %@, %@", NSStringFromCGRect(graphViewFrame), NSStringFromCGRect(paddingViewFrame), NSStringFromCGRect(contentViewFrame), NSStringFromCGRect(graphSelectionTableViewFrame));
@@ -56,17 +59,17 @@ static CGFloat graphHeight = 212;
     _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
     [_paddingView setBackgroundColor:[UIColor blueColor]];
 
-    _contentView = [[UIView alloc] initWithFrame:contentViewFrame];
-    [_contentView setBackgroundColor:[UIColor greenColor]];
+    _selectionContentView = [[UIView alloc] initWithFrame:contentViewFrame];
+    [_selectionContentView setBackgroundColor:[UIColor greenColor]];
 
     UITableView *graphSelectionTableView = (UITableView *) [_graphSelectionTableViewController tableView];
     [graphSelectionTableView setFrame:graphSelectionTableViewFrame];
     [graphSelectionTableView setBackgroundColor:[UIColor yellowColor]];
 
     [[self view] addSubview:_paddingView];
-    [_paddingView addSubview:_contentView];
-    [_contentView addSubview:[_graphSelectionTableViewController tableView]];
-    
+    [_paddingView addSubview:_selectionContentView];
+    [_selectionContentView addSubview:[_graphSelectionTableViewController tableView]];
+
     //Set up Navigation Bar:
     self.title = @"DATA";
     

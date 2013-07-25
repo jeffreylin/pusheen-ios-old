@@ -15,10 +15,8 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 
 @interface PSGraphSelectionTableViewController () {
-    NSMutableSet *_selectedCells;
 }
 
-@property NSInteger *counter;
 
 @end
 
@@ -30,8 +28,6 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     self = [super initWithStyle:style];
     if (self) {
         [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
-        _selectedCells = [[NSMutableSet alloc] init];
-        _counter = 0;
     }
     return self;
 }
@@ -76,39 +72,21 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 //    cell.backgroundColor = [UIColor orangeColor];
 //    cell.textLabel.backgroundColor = [UIColor redColor];
-    cell.textLabel.text = [NSString stringWithFormat:@"%p", cell];
-    _counter = _counter + 1;
+//    [cell setAccessoryType:UITableViewCellAccessoryNone];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d", [indexPath row]];
+    NSLog(@"CellForRow");
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-
-//    if ([_selectedCells containsObject:cell]) {
-//    } else {
-        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
-        [_selectedCells addObject:cell];
-        NSLog(@"SELECT %@", cell);
-//    }
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
-    [cell setAccessoryType:UITableViewCellAccessoryNone];
-    [cell setNeedsDisplay];
-    NSLog(@"DESELECT %@", cell);
 }
 
 /*
-// Override to support conditional editing of the ta
- 
- 
- 
- 
- 
- 
- ble view.
+// Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.

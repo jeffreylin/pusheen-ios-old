@@ -16,7 +16,8 @@ static CGFloat padding = 12;
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-      _color = nil;
+        _color = nil;
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;
 }
@@ -31,6 +32,12 @@ static CGFloat padding = 12;
 {
     [super setSelected:selected animated:animated];
     // Set what happens when the cell is selected
+    if (selected) {
+        [self setAccessoryType:UITableViewCellAccessoryCheckmark];
+    } else {
+        [self setAccessoryType:UITableViewCellAccessoryNone];
+
+    }
 }
 
 @end
