@@ -30,6 +30,7 @@
         [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
     //}
     [self.navigationController.navigationBar setTranslucent:NO];
+    [self setTitle:@"Hello!"];
 }
 
 - (void)buttonPressed

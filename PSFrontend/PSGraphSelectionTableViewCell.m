@@ -8,6 +8,8 @@
 
 #import "PSGraphSelectionTableViewCell.h"
 
+static CGFloat padding = 12;
+
 @implementation PSGraphSelectionTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -17,6 +19,12 @@
       _color = nil;
     }
     return self;
+}
+
+- (void)setFrame:(CGRect)frame {
+    frame.origin.x += padding;
+    frame.size.width -= padding * 2;
+    [super setFrame:frame];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

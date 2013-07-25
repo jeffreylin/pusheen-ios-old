@@ -19,29 +19,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
 
+    // AppDelegate should probably only contain the navController its rootViewController
+
     CGRect screenRect = [[self window] bounds];
-    CGRect bigRect = screenRect;
-    bigRect.size.width *= 3.0;
-    
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
     [scrollView setPagingEnabled:YES];
     [[self window] addSubview:scrollView];
-    /*
-    PSTableView *view = [[PSTableView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:view];
-    
-    screenRect.origin.x = screenRect.size.width;
-    
-    PSTableView *rightView = [[PSTableView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:rightView];
-    
-    screenRect.origin.x -= 2*screenRect.size.width;
-    
-    PSTableView *leftView = [[PSTableView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:leftView];
-    */
-    
-    [scrollView setContentSize:bigRect.size];
 
     PSDayTableViewController *feedTableViewController = [[PSDayTableViewController alloc] init];
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
