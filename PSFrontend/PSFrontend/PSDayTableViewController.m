@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 Pusheen. All rights reserved.
 //
 
-#import "PSTableViewController.h"
+#import "PSDayTableViewController.h"
 #import "UIColor+PSUIColorPalette.h"
 
-@interface PSTableViewController ()
+@interface PSDayTableViewController ()
 
 @property(nonatomic, retain) UIColor *separatorColor;
 
 @end
 
-@implementation PSTableViewController
+@implementation PSDayTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

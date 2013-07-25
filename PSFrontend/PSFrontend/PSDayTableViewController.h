@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PSDayTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

@@ -8,7 +8,7 @@
 
 #import "PSAppDelegate.h"
 #import "PSNavigationController.h"
-#import "PSTableViewController.h"
+#import "PSDayTableViewController.h"
 #import "PSGraphViewController.h"
 
 @implementation PSAppDelegate
@@ -20,7 +20,7 @@
 
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
 
-    PSTableViewController *feedTableViewController = [[PSTableViewController alloc] init];
+    PSDayTableViewController *feedTableViewController = [[PSDayTableViewController alloc] init];
 
 
 

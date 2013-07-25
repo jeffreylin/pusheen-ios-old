@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		288D618217A055D100382924 /* PSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288D618117A055D100382924 /* PSTableViewController.m */; };
+		288D618217A055D100382924 /* PSDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288D618117A055D100382924 /* PSDayTableViewController.m */; };
 		6416AD1D17A0FEB80090F883 /* PSGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD1C17A0FEB80090F883 /* PSGraphViewController.m */; };
 		646ED596179F3B9600BF997C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED595179F3B9600BF997C /* Foundation.framework */; };
 		646ED598179F3B9600BF997C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED597179F3B9600BF997C /* CoreGraphics.framework */; };
@@ -43,8 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		288D618017A055D100382924 /* PSTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTableViewController.h; sourceTree = "<group>"; };
-		288D618117A055D100382924 /* PSTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTableViewController.m; sourceTree = "<group>"; };
+		288D618017A055D100382924 /* PSDayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDayTableViewController.h; path = PSFrontend/PSDayTableViewController.h; sourceTree = "<group>"; };
+		288D618117A055D100382924 /* PSDayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDayTableViewController.m; path = PSFrontend/PSDayTableViewController.m; sourceTree = "<group>"; };
 		6416AD1B17A0FEB80090F883 /* PSGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphViewController.h; sourceTree = "<group>"; };
 		6416AD1C17A0FEB80090F883 /* PSGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphViewController.m; sourceTree = "<group>"; };
 		646ED592179F3B9600BF997C /* PSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,8 +148,6 @@
 				646ED5A5179F3B9600BF997C /* PSAppDelegate.m */,
 				646ED60C179F48B700BF997C /* PSNavigationController.h */,
 				646ED60D179F48B700BF997C /* PSNavigationController.m */,
-				288D618017A055D100382924 /* PSTableViewController.h */,
-				288D618117A055D100382924 /* PSTableViewController.m */,
 				646ED5A7179F3B9600BF997C /* Images.xcassets */,
 				646ED59C179F3B9600BF997C /* Supporting Files */,
 			);
@@ -188,6 +186,8 @@
 		646ED606179F3DAF00BF997C /* PSDayView */ = {
 			isa = PBXGroup;
 			children = (
+				288D618017A055D100382924 /* PSDayTableViewController.h */,
+				288D618117A055D100382924 /* PSDayTableViewController.m */,
 				F849E20717A042F70093724D /* Cells */,
 			);
 			name = PSDayView;
@@ -341,7 +341,7 @@
 				F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */,
 				648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */,
 				646ED5A6179F3B9600BF997C /* PSAppDelegate.m in Sources */,
-				288D618217A055D100382924 /* PSTableViewController.m in Sources */,
+				288D618217A055D100382924 /* PSDayTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
