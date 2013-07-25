@@ -28,6 +28,7 @@
 		F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */; };
 		F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */; };
 		F8F0ADB017A09EB600F8122E /* PSStoryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F0ADAF17A09EB600F8122E /* PSStoryContentViewController.m */; };
+		F8F0ADB317A0BE7600F8122E /* PSCellInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F0ADB217A0BE7600F8122E /* PSCellInfoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedStoryHeader.m; sourceTree = "<group>"; };
 		F8F0ADAE17A09EB600F8122E /* PSStoryContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStoryContentViewController.h; sourceTree = "<group>"; };
 		F8F0ADAF17A09EB600F8122E /* PSStoryContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStoryContentViewController.m; sourceTree = "<group>"; };
+		F8F0ADB117A0BE7600F8122E /* PSCellInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCellInfoModel.h; sourceTree = "<group>"; };
+		F8F0ADB217A0BE7600F8122E /* PSCellInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCellInfoModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,9 +216,11 @@
 				F8C98BC517A05C4E00059BF4 /* PSFeedStoryCell.h */,
 				F8C98BC617A05C4E00059BF4 /* PSFeedStoryCell.m */,
 				F8479EB017A0936A000F68F8 /* PSHeaderViewController.h */,
+				F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */,
+				F8F0ADB117A0BE7600F8122E /* PSCellInfoModel.h */,
+				F8F0ADB217A0BE7600F8122E /* PSCellInfoModel.m */,
 				F8F0ADAE17A09EB600F8122E /* PSStoryContentViewController.h */,
 				F8F0ADAF17A09EB600F8122E /* PSStoryContentViewController.m */,
-				F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */,
 				F8C98BC917A05C4E00059BF4 /* PSFeedStoryHeader.h */,
 				F8C98BCA17A05C4E00059BF4 /* PSFeedStoryHeader.m */,
 				83FDCEDB17A0ABAE00B177B9 /* PSFeedEnums.h */,
@@ -319,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F0ADB317A0BE7600F8122E /* PSCellInfoModel.m in Sources */,
 				646ED5A2179F3B9600BF997C /* main.m in Sources */,
 				646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */,
 				F8479EB217A0936A000F68F8 /* PSHeaderViewController.m in Sources */,
