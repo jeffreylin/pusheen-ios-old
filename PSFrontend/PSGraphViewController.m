@@ -54,17 +54,16 @@ static CGFloat graphHeight = 212;
 
     NSLog(@"%@, %@, %@, %@", NSStringFromCGRect(graphViewFrame), NSStringFromCGRect(paddingViewFrame), NSStringFromCGRect(contentViewFrame), NSStringFromCGRect(graphSelectionTableViewFrame));
 
-    [[self view] setBackgroundColor:[UIColor purpleColor]];
 
     _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
-    [_paddingView setBackgroundColor:[UIColor blueColor]];
+    [_paddingView setBackgroundColor:[UIColor viewBackgroundColor]];
 
     _selectionContentView = [[UIView alloc] initWithFrame:contentViewFrame];
-    [_selectionContentView setBackgroundColor:[UIColor greenColor]];
+    [_selectionContentView setBackgroundColor:[UIColor viewBackgroundColor]];
 
     UITableView *graphSelectionTableView = (UITableView *) [_graphSelectionTableViewController tableView];
     [graphSelectionTableView setFrame:graphSelectionTableViewFrame];
-    [graphSelectionTableView setBackgroundColor:[UIColor yellowColor]];
+    [graphSelectionTableView setBackgroundColor:[UIColor viewBackgroundColor]];
 
     [[self view] addSubview:_paddingView];
     [_paddingView addSubview:_selectionContentView];
