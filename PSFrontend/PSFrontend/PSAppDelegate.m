@@ -24,8 +24,7 @@
 
 
 
-    // AppDelegate should only contain the Root View Controller (NavigationViewController) and the view controller it needs to be initialized with (PageScrollViewController). All others should be done when the NavigationViewController or PageScrollViewController loads.
-
+    // AppDelegate should probably only contain the navController its rootViewController
 
 
 
