@@ -1,5 +1,5 @@
 //
-//  PSTableViewController.h
+//  PSDayTableViewController.h
 //  PSFrontend
 //
 //  Created by Yi-Lin Jao on 7/24/13.
