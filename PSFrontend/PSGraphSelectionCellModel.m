@@ -10,4 +10,15 @@
 
 @implementation PSGraphSelectionCellModel
 
+- (id)initWithImage:(UIImage *)image title:(NSString *)title detailText:(NSString *)detailText andAccessoryImage:(NSString *)accessoryImage {
+    if (self = [super init]) {
+        _image = image;
+        _title = title;
+        _detailText = detailText;
+        _accessoryImage = accessoryImage;
+    }
+    return self;
+}
+
+
 @end

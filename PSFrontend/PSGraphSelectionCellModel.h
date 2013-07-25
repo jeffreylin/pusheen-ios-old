@@ -11,7 +11,10 @@
 @interface PSGraphSelectionCellModel : NSObject
 
 @property (strong, nonatomic) UIImage *image;
-@property (strong, nonatomic) NSString *category;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *detailText;
 @property (strong, nonatomic) UIImage *accessoryImage;
+
+- (id)initWithImage:(UIImage *)image title:(NSString *)title detailText:(NSString *)detailText andAccessoryImage:(NSString *)accessoryImage;
 
 @end

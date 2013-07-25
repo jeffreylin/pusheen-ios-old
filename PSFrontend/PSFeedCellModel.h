@@ -10,6 +10,7 @@
 // as we add other types of
 
 #import <Foundation/Foundation.h>
+#import "PSFeedEnums.h"
 
 @interface PSFeedCellModel : NSObject
 
@@ -18,6 +19,7 @@
 @property NSString* textContent;
 @property NSDate* timestamp;
 
+- (id)initWithContentType:(contentType)type title:(NSString *)title andTime:(NSDate *)time;
 
 
 @end

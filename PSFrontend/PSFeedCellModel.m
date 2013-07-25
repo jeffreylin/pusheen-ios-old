@@ -10,7 +10,7 @@
 
 @implementation PSFeedCellModel
 
-- (id)initWithContentType: (contentType) type title: (NSString*) title andTimestamp: (NSDate*) time
+- (id)initWithContentType:(contentType)type title:(NSString *)title andTime:(NSDate *)time
 {
     if (self = [super init]) {
         self.typeOfContent = type;
