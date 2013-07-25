@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6416AD2217A1DE6A0090F883 /* PSFeedCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD2117A1DE6A0090F883 /* PSFeedCellModel.m */; };
+		6416AD2517A1E17E0090F883 /* PSGraphSelectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD2417A1E17E0090F883 /* PSGraphSelectionCellModel.m */; };
 		646ED5D1179F3BB100BF997C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED5D0179F3BB100BF997C /* Foundation.framework */; };
 		646ED5D3179F3BB100BF997C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED5D2179F3BB100BF997C /* CoreGraphics.framework */; };
 		646ED5D5179F3BB100BF997C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED5D4179F3BB100BF997C /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		6416AD2017A1DE6A0090F883 /* PSFeedCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedCellModel.h; sourceTree = "<group>"; };
 		6416AD2117A1DE6A0090F883 /* PSFeedCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedCellModel.m; sourceTree = "<group>"; };
+		6416AD2317A1E17E0090F883 /* PSGraphSelectionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphSelectionCellModel.h; sourceTree = "<group>"; };
+		6416AD2417A1E17E0090F883 /* PSGraphSelectionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionCellModel.m; sourceTree = "<group>"; };
 		646ED5CD179F3BB100BF997C /* PSBackend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSBackend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646ED5D0179F3BB100BF997C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		646ED5D2179F3BB100BF997C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 		6416AD1E17A1D6B30090F883 /* PSGroupBackend */ = {
 			isa = PBXGroup;
 			children = (
+				6416AD2317A1E17E0090F883 /* PSGraphSelectionCellModel.h */,
+				6416AD2417A1E17E0090F883 /* PSGraphSelectionCellModel.m */,
 			);
 			name = PSGroupBackend;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6416AD2217A1DE6A0090F883 /* PSFeedCellModel.m in Sources */,
+				6416AD2517A1E17E0090F883 /* PSGraphSelectionCellModel.m in Sources */,
 				646ED5E6179F3BB100BF997C /* PSBackend.xcdatamodeld in Sources */,
 				646ED5DF179F3BB100BF997C /* main.m in Sources */,
 				646ED5E3179F3BB100BF997C /* PSAppDelegate.m in Sources */,

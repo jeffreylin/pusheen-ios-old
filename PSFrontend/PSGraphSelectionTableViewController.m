@@ -9,6 +9,7 @@
 #import "PSGraphSelectionTableViewController.h"
 #import "PSGraphSelectionTableViewCell.h"
 
+#import "UIColor+PSUIColorPalette.h"
 static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 
@@ -44,6 +45,10 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
     [(UITableView *) [self tableView] setAllowsSelection:YES];
     [(UITableView *) [self tableView] setAllowsMultipleSelection:YES];
+    [(UITableView *) [self tableView] setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, -2)];
+    [(UITableView *) [self tableView] setSeparatorColor:[UIColor viewBackgroundColor]];
+
+
 
 }
 
@@ -70,11 +75,10 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor orangeColor];
+    cell.backgroundColor = [UIColor whiteColor];
 //    cell.textLabel.backgroundColor = [UIColor redColor];
 //    [cell setAccessoryType:UITableViewCellAccessoryNone];
     cell.textLabel.text = [NSString stringWithFormat:@"%d", [indexPath row]];
-    NSLog(@"CellForRow");
 
     return cell;
 }

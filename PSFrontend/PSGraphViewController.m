@@ -52,8 +52,6 @@ static CGFloat graphHeight = 212;
     CGRect contentViewFrame = CGRectMake(zero, zero + padding, paddingViewFrame.size.width, paddingViewFrame.size.height - padding);
     CGRect graphSelectionTableViewFrame = CGRectMake(zero, zero, contentViewFrame.size.width, contentViewFrame.size.height);
 
-    NSLog(@"%@, %@, %@, %@", NSStringFromCGRect(graphViewFrame), NSStringFromCGRect(paddingViewFrame), NSStringFromCGRect(contentViewFrame), NSStringFromCGRect(graphSelectionTableViewFrame));
-
 
     _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
     [_paddingView setBackgroundColor:[UIColor viewBackgroundColor]];
