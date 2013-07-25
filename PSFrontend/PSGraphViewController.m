@@ -7,6 +7,7 @@
 //
 
 #import "PSGraphViewController.h"
+#import "PSGraphSelectionTableViewController.h"
 
 static CGFloat padding = 12;
 static CGFloat tableViewOriginY = 65;
@@ -23,9 +24,6 @@ static CGFloat graphHeight = 212;
 
 - (id)init {
     if (self = [super init]) {
-        CGRect graphViewFrame = [[self view] frame];
-        CGRect paddingViewFrame = CGRectMake(graphViewFrame.origin.x, graphViewFrame.origin.y, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight);
-        _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
     }
     return self;
 }
@@ -33,13 +31,27 @@ static CGFloat graphHeight = 212;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    CGRect graphViewFrame = [[self view] frame];
+    CGRect paddingViewFrame = CGRectMake(graphViewFrame.origin.x, graphViewFrame.origin.y, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight);
+    _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
+    [_paddingView setBackgroundColor:[UIColor blueColor]];
+
+    CGRect contentViewFrame = CGRectMake(paddingViewFrame.origin.x + padding, paddingViewFrame.origin.y + padding, paddingViewFrame.size.width - 2 * padding, paddingViewFrame.size.height);
+    _contentView = [[UIView alloc] initWithFrame:contentViewFrame];
+    [_contentView setBackgroundColor:[UIColor greenColor]];
+
+    [[self view] addSubview:_paddingView];
+    [_paddingView addSubview:_contentView];
+
+    _graphSelectionTableViewController = [[PSGraphSelectionTableViewController alloc] init];
+//    [[_graphSelectionTableViewController view] setFrame:[_contentView frame]];
+    [[_graphSelectionTableViewController view] setBackgroundColor:[UIColor yellowColor]];
+    [_contentView addSubview:[_graphSelectionTableViewController tableView]];
 }
 
 - (void)didReceiveMemoryWarning

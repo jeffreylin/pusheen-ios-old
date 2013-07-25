@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class PSGraphSelectionTableViewController;
+
 @interface PSGraphViewController : UIViewController
 
 @property (strong, nonatomic) UIView *contentView;
+@property (strong, nonatomic) PSGraphSelectionTableViewController *graphSelectionTableViewController;
 
 @end

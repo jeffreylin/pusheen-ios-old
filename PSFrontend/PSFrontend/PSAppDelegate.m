@@ -9,7 +9,7 @@
 #import "PSAppDelegate.h"
 #import "PSNavigationController.h"
 #import "PSTableViewController.h"
-#import "PSGraphSelectionTableViewController.h"
+#import "PSGraphViewController.h"
 
 @implementation PSAppDelegate
 
@@ -17,12 +17,22 @@
 {
     //Create our new window:
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-    
+
     PSTableViewController *feedTableViewController = [[PSTableViewController alloc] init];
-    PSGraphSelectionTableViewController *graphSelectionTableViewController = [[PSGraphSelectionTableViewController alloc] init];
-    
-    //Temporary: comment out one of the lines to switch between Feed View and Table View.
+
+
+
+    // AppDelegate should only contain the Root View Controller (NavigationViewController) and the view controller it needs to be initialized with (PageScrollViewController). All others should be done when the NavigationViewController or PageScrollViewController loads.
+
+
+
+
+
+
+
+
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
     //PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphSelectionTableViewController];
     
@@ -50,6 +60,10 @@
     
     [scrollView setContentSize:bigRect.size];
 
+    PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
+
+//    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
+    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphViewController];
 
     [[self window] setRootViewController:navController];
     [self.window makeKeyAndVisible];
