@@ -19,7 +19,6 @@
 {
     [super viewDidLoad];
     [self.navigationBar setOpaque:YES];
-
     [[UINavigationBar appearance] setTitleTextAttributes: @{
                                                             UITextAttributeFont: [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0f],
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
@@ -27,8 +26,11 @@
     [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
-    [self setNeedsStatusBarAppearanceUpdate];
-    
+}
+
+- (void)buttonPressed
+{
+    NSLog(@"Ayo! You pressed a button.");
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -40,6 +42,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end
 

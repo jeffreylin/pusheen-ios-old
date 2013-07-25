@@ -30,15 +30,29 @@
 {
     [super viewDidLoad];
     self.title = @"JULY 31 2013";
+    
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
     [self.tableView setSeparatorColor:[UIColor clearColor]];
 
+    UIImage *imgNavLog = [UIImage imageNamed:@"navLog-2"];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.leftBarButtonItem = leftButton;
+    
+    UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings-2"];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)buttonPressed
+{
+    NSLog(@"Ayo! You pressed a button.");
 }
 
 - (void)didReceiveMemoryWarning
