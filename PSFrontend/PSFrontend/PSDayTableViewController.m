@@ -21,6 +21,7 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
+
     if (self) {
         // Custom initialization
     }
@@ -30,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, -35, 0);
     
     //Get the current date.
     NSDate *date = [NSDate date];
@@ -84,7 +86,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of cell we want.
-    return 10;
+    return 13;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,13 +102,12 @@
     
     //cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
-
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // height of rows
-    return 100.0;
+    return 52.0;
 }
 
 /*
