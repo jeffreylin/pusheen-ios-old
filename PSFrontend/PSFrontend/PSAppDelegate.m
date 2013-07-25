@@ -33,8 +33,6 @@
 
 
 
-    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
-    //PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphSelectionTableViewController];
     
     CGRect screenRect = [[self window] bounds];
     CGRect bigRect = screenRect;
@@ -63,6 +61,8 @@
 
     PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
 
+    // Comment out as needed
+    
 //    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphViewController];
 
