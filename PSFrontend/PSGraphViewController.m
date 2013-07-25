@@ -73,7 +73,7 @@ static CGFloat graphHeight = 212;
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
     
-    UIImage *imgNavLog = [UIImage imageNamed:@"navLog-2"];
+    UIImage *imgNavLog = [UIImage imageNamed:@"navFeed-2"];
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
     self.navigationItem.leftBarButtonItem = leftButton;
     
