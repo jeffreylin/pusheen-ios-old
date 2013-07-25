@@ -9,6 +9,7 @@
 #import "PSFeedCellModel.h"
 
 @implementation PSFeedCellModel
+
 - (id)initWithContentType: (contentType) type title: (NSString*) title andTimestamp: (NSDate*) time
 {
     if (self = [super init]) {

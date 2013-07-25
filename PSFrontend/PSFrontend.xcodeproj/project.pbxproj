@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		288D618217A055D100382924 /* PSDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288D618117A055D100382924 /* PSDayTableViewController.m */; };
 		6416AD1D17A0FEB80090F883 /* PSGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD1C17A0FEB80090F883 /* PSGraphViewController.m */; };
+		6416AD3217A1E9E40090F883 /* PSFeedCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3117A1E9E40090F883 /* PSFeedCellModel.m */; };
+		6416AD3517A1E9EF0090F883 /* PSGraphSelectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3417A1E9EF0090F883 /* PSGraphSelectionCellModel.m */; };
 		646ED596179F3B9600BF997C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED595179F3B9600BF997C /* Foundation.framework */; };
 		646ED598179F3B9600BF997C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED597179F3B9600BF997C /* CoreGraphics.framework */; };
 		646ED59A179F3B9600BF997C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED599179F3B9600BF997C /* UIKit.framework */; };
@@ -46,6 +48,10 @@
 		288D618117A055D100382924 /* PSDayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDayTableViewController.m; path = PSFrontend/PSDayTableViewController.m; sourceTree = "<group>"; };
 		6416AD1B17A0FEB80090F883 /* PSGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphViewController.h; sourceTree = "<group>"; };
 		6416AD1C17A0FEB80090F883 /* PSGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphViewController.m; sourceTree = "<group>"; };
+		6416AD3017A1E9E40090F883 /* PSFeedCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedCellModel.h; sourceTree = "<group>"; };
+		6416AD3117A1E9E40090F883 /* PSFeedCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSFeedCellModel.m; sourceTree = "<group>"; };
+		6416AD3317A1E9EF0090F883 /* PSGraphSelectionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphSelectionCellModel.h; sourceTree = "<group>"; };
+		6416AD3417A1E9EF0090F883 /* PSGraphSelectionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionCellModel.m; sourceTree = "<group>"; };
 		646ED592179F3B9600BF997C /* PSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646ED595179F3B9600BF997C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		646ED597179F3B9600BF997C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,9 +111,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6416AD2A17A1E9B80090F883 /* PSBackend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PSBackend;
+			sourceTree = "<group>";
+		};
+		6416AD2B17A1E9C60090F883 /* PSModels */ = {
+			isa = PBXGroup;
+			children = (
+				6416AD3317A1E9EF0090F883 /* PSGraphSelectionCellModel.h */,
+				6416AD3417A1E9EF0090F883 /* PSGraphSelectionCellModel.m */,
+				6416AD3017A1E9E40090F883 /* PSFeedCellModel.h */,
+				6416AD3117A1E9E40090F883 /* PSFeedCellModel.m */,
+			);
+			name = PSModels;
+			sourceTree = "<group>";
+		};
 		646ED589179F3B9600BF997C = {
 			isa = PBXGroup;
 			children = (
+				6416AD2B17A1E9C60090F883 /* PSModels */,
+				6416AD2A17A1E9B80090F883 /* PSBackend */,
 				646ED59B179F3B9600BF997C /* PSFrontend */,
 				646ED606179F3DAF00BF997C /* PSDayView */,
 				646ED608179F3F1600BF997C /* PSGraphView */,
@@ -335,6 +361,8 @@
 				F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */,
 				648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */,
 				646ED5A6179F3B9600BF997C /* PSAppDelegate.m in Sources */,
+				6416AD3217A1E9E40090F883 /* PSFeedCellModel.m in Sources */,
+				6416AD3517A1E9EF0090F883 /* PSGraphSelectionCellModel.m in Sources */,
 				288D618217A055D100382924 /* PSDayTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
