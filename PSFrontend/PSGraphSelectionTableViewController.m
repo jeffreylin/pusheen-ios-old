@@ -14,30 +14,26 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 
 
-@interface PSGraphSelectionTableViewController ()
+@interface PSGraphSelectionTableViewController () {
+    NSMutableSet *_selectedCells;
+}
+
+@property NSInteger *counter;
 
 @end
 
 @implementation PSGraphSelectionTableViewController
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
-          CGRect currentFrame = [[self tableView] frame];
-//        [self tableView]
+        _selectedCells = [[NSMutableSet alloc] init];
+        _counter = 0;
     }
     return self;
-}
-
-- (CGFloat)tableViewHeight {
-    if ([[self view] respondsToSelector:@selector(contentSize)]) {
-        UIScrollView *view = (UIScrollView *) [self view];
-        [view layoutIfNeeded];
-        return [view contentSize].height;
-    }
-    return 0.0;
 }
 
 - (void)viewDidLoad
@@ -49,6 +45,10 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    [(UITableView *) [self tableView] setAllowsSelection:YES];
+    [(UITableView *) [self tableView] setAllowsMultipleSelection:YES];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,25 +73,42 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Generating new Cell!");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor orangeColor];
-    cell.textLabel.backgroundColor = [UIColor redColor];
-    cell.textLabel.text = @"Hello World!";
+//    cell.backgroundColor = [UIColor orangeColor];
+//    cell.textLabel.backgroundColor = [UIColor redColor];
+    cell.textLabel.text = [NSString stringWithFormat:@"%p", cell];
+    _counter = _counter + 1;
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
 
+//    if ([_selectedCells containsObject:cell]) {
+//    } else {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];
+        [_selectedCells addObject:cell];
+        NSLog(@"SELECT %@", cell);
+//    }
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    [cell setAccessoryType:UITableViewCellAccessoryNone];
+    [cell setNeedsDisplay];
+    NSLog(@"DESELECT %@", cell);
 }
 
 /*
-// Override to support conditional editing of the table view.
+// Override to support conditional editing of the ta
+ 
+ 
+ 
+ 
+ 
+ 
+ ble view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.

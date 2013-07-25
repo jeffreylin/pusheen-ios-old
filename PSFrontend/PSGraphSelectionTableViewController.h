@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSGraphSelectionTableViewController : UITableViewController
+@interface PSGraphSelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-- (CGFloat)tableViewHeight;
+@property (strong, nonatomic) NSSet *selectedCells;
 
 @end

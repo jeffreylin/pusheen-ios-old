@@ -29,6 +29,7 @@
     PSDayTableViewController *feedTableViewController = [[PSDayTableViewController alloc] init];
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
 
+
     [[self window] setRootViewController:navController];
     [self.window makeKeyAndVisible];
 

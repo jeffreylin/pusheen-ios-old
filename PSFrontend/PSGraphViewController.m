@@ -59,7 +59,7 @@ static CGFloat graphHeight = 212;
     _contentView = [[UIView alloc] initWithFrame:contentViewFrame];
     [_contentView setBackgroundColor:[UIColor greenColor]];
 
-    UITableView *graphSelectionTableView = (UITableView *) [_graphSelectionTableViewController view];
+    UITableView *graphSelectionTableView = (UITableView *) [_graphSelectionTableViewController tableView];
     [graphSelectionTableView setFrame:graphSelectionTableViewFrame];
     [graphSelectionTableView setBackgroundColor:[UIColor yellowColor]];
 
