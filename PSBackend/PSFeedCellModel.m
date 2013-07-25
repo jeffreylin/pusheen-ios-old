@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Pusheen. All rights reserved.
 //
 
-#import "PSCellInfoModel.h"
+#import "PSFeedCellModel.h"
 
-@implementation PSCellInfoModel
+@implementation PSFeedCellModel
 - (id)initWithContentType: (contentType) type title: (NSString*) title andTimestamp: (NSDate*) time
 {
     if (self = [super init]) {

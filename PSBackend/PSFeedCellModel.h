@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "PSFeedEnums.h"
 
-@interface PSCellInfoModel : NSObject
+@interface PSFeedCellModel : NSObject
 
 @property contentType typeOfContent;
 @property NSString* storyTitle;
