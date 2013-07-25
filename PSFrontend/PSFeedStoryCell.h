@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PSFeedStoryHeader.h"
-typedef enum {
-    TEXT_ENTRY,
-    EVENT
-}contentType;
+#import "PSFeedEnums.h"
+
 @interface PSFeedStoryCell : UITableViewCell
 @property BOOL isEditable;
-@property enum contentType typeOfContent;
+@property contentType typeOfContent;
 @property PSFeedStoryHeader* header;
 @property UIView* content;
 @end
+

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PSFeedStoryCell.h"
-#import "PSFeedStoryCell.h"
+#import "PSFeedEnums.h"
+
 @interface PSFeedStoryHeader : UIView
-@property enum contentType typeOfContent;
+@property contentType typeOfContent;
 @property NSString* title;
 @property NSDate* time;
 @property NSString* place;

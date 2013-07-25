@@ -7,6 +7,7 @@
 //
 
 #import "PSFeedStoryHeader.h"
+#import "PSFeedStoryCell.h"
 
 @interface PSFeedStoryHeader()
 
@@ -22,7 +23,7 @@
     }
     return self;
 }
-- (void)
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

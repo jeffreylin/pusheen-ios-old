@@ -25,7 +25,7 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     self = [super initWithStyle:style];
     if (self) {
         [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
-        CGRect currentFrame = [[self tableView] frame];
+          CGRect currentFrame = [[self tableView] frame];
 //        [self tableView]
     }
     return self;
