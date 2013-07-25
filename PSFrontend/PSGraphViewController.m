@@ -85,10 +85,10 @@ static CGFloat graphHeight = 212;
 - (void)buttonPressed
 {
     NSLog(@"Switching to Day View.");
+    
     PSDayTableViewController *dayTableViewController = [[PSDayTableViewController alloc] init];
-    [UIView transitionFromView:self.view toView:dayTableViewController.view duration:0.5
-                       options:UIViewAnimationOptionTransitionFlipFromLeft
-                    completion:nil];
+    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController pushViewController:dayTableViewController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

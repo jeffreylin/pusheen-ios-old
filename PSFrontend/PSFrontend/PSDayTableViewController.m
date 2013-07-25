@@ -48,10 +48,14 @@
 - (void)buttonPressed
 {
     NSLog(@"Switching to Graph View.");
+    
     PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
-    [UIView transitionFromView:self.view toView:graphViewController.view duration:0.5
-                       options:UIViewAnimationOptionTransitionFlipFromLeft
-                    completion:nil];
+    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController pushViewController:graphViewController animated:NO];
+
+    //[UIView transitionFromView:self.view toView:graphViewController.view duration:0.5
+    //                   options:UIViewAnimationOptionTransitionFlipFromLeft
+    //                completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
