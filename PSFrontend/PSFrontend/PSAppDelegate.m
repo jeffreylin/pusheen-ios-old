@@ -33,6 +33,7 @@
 
 
 
+
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
     //PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphSelectionTableViewController];
     
@@ -59,6 +60,7 @@
      */
     
     [scrollView setContentSize:bigRect.size];
+
 
     PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
 
