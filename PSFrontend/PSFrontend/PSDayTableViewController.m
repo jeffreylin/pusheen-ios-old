@@ -30,7 +30,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"JULY 31 2013";
+    
+    //Get the current date.
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    //Format the date into a string.
+    [dateFormat setDateStyle: NSDateFormatterMediumStyle];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    dateString = dateString.uppercaseString;
+    NSString *formattedString = [dateString stringByReplacingOccurrencesOfString:@"," withString:@""];
+    self.title = formattedString;
     
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
