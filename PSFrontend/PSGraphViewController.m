@@ -10,13 +10,15 @@
 #import "PSGraphSelectionTableViewController.h"
 
 static CGFloat padding = 12;
+static CGFloat zero = 0.0;
+static CGFloat paddingViewOriginY = 53;
 static CGFloat tableViewOriginY = 65;
 static CGFloat tableViewHeight = 291;
 static CGFloat graphHeight = 212;
 
 @interface PSGraphViewController ()
 
-@property (strong, nonatomic) UIScrollView *paddingView;
+@property (strong, nonatomic) UIView *paddingView;
 
 @end
 
@@ -36,21 +38,31 @@ static CGFloat graphHeight = 212;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    _graphSelectionTableViewController = [[PSGraphSelectionTableViewController alloc] init];
+//    CGFloat graphSelectionTableViewHeight = [_graphSelectionTableViewController tableViewHeight];
+
     CGRect graphViewFrame = [[self view] frame];
-    CGRect paddingViewFrame = CGRectMake(graphViewFrame.origin.x, graphViewFrame.origin.y, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight);
+    CGRect paddingViewFrame = CGRectMake(zero, zero, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight);
+    CGRect contentViewFrame = CGRectMake(zero + padding, zero + padding, paddingViewFrame.size.width - 2 * padding, paddingViewFrame.size.height - padding - 65);
+    CGRect graphSelectionTableViewFrame = CGRectMake(zero, zero, contentViewFrame.size.width, contentViewFrame.size.height);
+    NSLog(@"%@, %@, %@, %@", NSStringFromCGRect(graphViewFrame), NSStringFromCGRect(paddingViewFrame), NSStringFromCGRect(contentViewFrame), NSStringFromCGRect(graphSelectionTableViewFrame));
+
+    [[self view] setBackgroundColor:[UIColor purpleColor]];
+
+
     _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
     [_paddingView setBackgroundColor:[UIColor blueColor]];
 
-    CGRect contentViewFrame = CGRectMake(paddingViewFrame.origin.x + padding, paddingViewFrame.origin.y + padding, paddingViewFrame.size.width - 2 * padding, paddingViewFrame.size.height);
     _contentView = [[UIView alloc] initWithFrame:contentViewFrame];
     [_contentView setBackgroundColor:[UIColor greenColor]];
 
+    UITableView *graphSelectionTableView = (UITableView *) [_graphSelectionTableViewController view];
+    [graphSelectionTableView setFrame:graphSelectionTableViewFrame];
+    [graphSelectionTableView setBackgroundColor:[UIColor yellowColor]];
+
     [[self view] addSubview:_paddingView];
     [_paddingView addSubview:_contentView];
-
-    _graphSelectionTableViewController = [[PSGraphSelectionTableViewController alloc] init];
-//    [[_graphSelectionTableViewController view] setFrame:[_contentView frame]];
-    [[_graphSelectionTableViewController view] setBackgroundColor:[UIColor yellowColor]];
     [_contentView addSubview:[_graphSelectionTableViewController tableView]];
 }
 

@@ -31,6 +31,15 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     return self;
 }
 
+- (CGFloat)tableViewHeight {
+    if ([[self view] respondsToSelector:@selector(contentSize)]) {
+        UIScrollView *view = (UIScrollView *) [self view];
+        [view layoutIfNeeded];
+        return [view contentSize].height;
+    }
+    return 0.0;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -64,8 +73,10 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"Generating new Cell!");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-//    cell.backgroundColor = [UIColor redColor];
+    cell.backgroundColor = [UIColor orangeColor];
+    cell.textLabel.backgroundColor = [UIColor redColor];
     cell.textLabel.text = @"Hello World!";
 
     return cell;

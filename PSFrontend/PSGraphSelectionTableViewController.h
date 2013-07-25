@@ -10,4 +10,6 @@
 
 @interface PSGraphSelectionTableViewController : UITableViewController
 
+- (CGFloat)tableViewHeight;
+
 @end
