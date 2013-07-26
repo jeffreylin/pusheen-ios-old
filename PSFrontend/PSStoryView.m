@@ -14,7 +14,9 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        [self setBackgroundColor:[UIColor whiteColor]];
+        self.header = [[PSFeedStoryHeader alloc] initWithFrame:CGRectMake(12, 12, self.frame.size.width - 24, 32)];
+        [self addSubview:self.header];
     }
     return self;
 }
