@@ -84,7 +84,7 @@ static CGFloat graphHeight = 212;
     
     //Add Month scroll view:
     PSGraphMonthViewController *monthViewController = [[PSGraphMonthViewController alloc] init];
-    [monthViewController setFrame:CGRectMake(zero, contentViewFrame.size.height, contentViewFrame.size.width*2, 32)];
+    [monthViewController setFrame:CGRectMake(zero, contentViewFrame.size.height, contentViewFrame.size.width, 32.0)];
     [monthViewController setBackgroundColor:[UIColor navigationBarColor]];
     [[self view] addSubview:monthViewController];
 }
