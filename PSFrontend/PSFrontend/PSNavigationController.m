@@ -24,7 +24,7 @@
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
                                                             }];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];
-
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
 }
 
 - (void)buttonPressed
