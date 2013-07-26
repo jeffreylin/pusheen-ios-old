@@ -34,10 +34,12 @@ static CGFloat padding = 12;
     // Set what happens when the cell is selected
     if (selected) {
         [self setAccessoryType:UITableViewCellAccessoryCheckmark];
+        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
     } else {
         [self setAccessoryType:UITableViewCellAccessoryNone];
-
+        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
     }
+
 }
 
 @end

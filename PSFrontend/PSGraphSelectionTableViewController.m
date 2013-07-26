@@ -78,7 +78,8 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     cell.backgroundColor = [UIColor whiteColor];
 //    cell.textLabel.backgroundColor = [UIColor redColor];
 //    [cell setAccessoryType:UITableViewCellAccessoryNone];
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", [indexPath row]];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+    cell.textLabel.text = [NSString stringWithFormat:@"Test Category %d", [indexPath row]];
 
     return cell;
 }
