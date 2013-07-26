@@ -36,9 +36,13 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
+    [super setSelected:selected animated:animated];
+    
+    if (selected) {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit", @"Share", @"Delete", nil];
+        [sheet showInView:_parent.view];
+    }
 }
 
 @end
