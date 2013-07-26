@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281C4CD717A1B12300BDEF13 /* PSDayScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4CD617A1B12300BDEF13 /* PSDayScrollView.m */; };
+		281C4CDA17A1DFAB00BDEF13 /* PSDayPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281C4CD917A1DFAB00BDEF13 /* PSDayPageViewController.m */; };
 		288D618217A055D100382924 /* PSDayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288D618117A055D100382924 /* PSDayTableViewController.m */; };
+		28D0804617A2390700BABF23 /* PSDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D0804517A2390700BABF23 /* PSDayViewController.m */; };
 		6416AD1D17A0FEB80090F883 /* PSGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD1C17A0FEB80090F883 /* PSGraphViewController.m */; };
 		6416AD3217A1E9E40090F883 /* PSFeedCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3117A1E9E40090F883 /* PSFeedCellModel.m */; };
 		6416AD3517A1E9EF0090F883 /* PSGraphSelectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3417A1E9EF0090F883 /* PSGraphSelectionCellModel.m */; };
@@ -48,8 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		281C4CD517A1B12300BDEF13 /* PSDayScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDayScrollView.h; sourceTree = "<group>"; };
+		281C4CD617A1B12300BDEF13 /* PSDayScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDayScrollView.m; sourceTree = "<group>"; };
+		281C4CD817A1DFAB00BDEF13 /* PSDayPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDayPageViewController.h; sourceTree = "<group>"; };
+		281C4CD917A1DFAB00BDEF13 /* PSDayPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDayPageViewController.m; sourceTree = "<group>"; };
 		288D618017A055D100382924 /* PSDayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSDayTableViewController.h; path = PSFrontend/PSDayTableViewController.h; sourceTree = "<group>"; };
 		288D618117A055D100382924 /* PSDayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSDayTableViewController.m; path = PSFrontend/PSDayTableViewController.m; sourceTree = "<group>"; };
+		28D0804417A2390700BABF23 /* PSDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDayViewController.h; sourceTree = "<group>"; };
+		28D0804517A2390700BABF23 /* PSDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDayViewController.m; sourceTree = "<group>"; };
 		6416AD1B17A0FEB80090F883 /* PSGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphViewController.h; sourceTree = "<group>"; };
 		6416AD1C17A0FEB80090F883 /* PSGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphViewController.m; sourceTree = "<group>"; };
 		6416AD3017A1E9E40090F883 /* PSFeedCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedCellModel.h; sourceTree = "<group>"; };
@@ -225,8 +234,14 @@
 		646ED606179F3DAF00BF997C /* PSDayView */ = {
 			isa = PBXGroup;
 			children = (
+				281C4CD817A1DFAB00BDEF13 /* PSDayPageViewController.h */,
+				281C4CD917A1DFAB00BDEF13 /* PSDayPageViewController.m */,
+				28D0804417A2390700BABF23 /* PSDayViewController.h */,
+				28D0804517A2390700BABF23 /* PSDayViewController.m */,
 				288D618017A055D100382924 /* PSDayTableViewController.h */,
 				288D618117A055D100382924 /* PSDayTableViewController.m */,
+				281C4CD517A1B12300BDEF13 /* PSDayScrollView.h */,
+				281C4CD617A1B12300BDEF13 /* PSDayScrollView.m */,
 				F849E20717A042F70093724D /* Cells */,
 			);
 			name = PSDayView;
@@ -370,12 +385,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D0804617A2390700BABF23 /* PSDayViewController.m in Sources */,
+				F8F0ADB317A0BE7600F8122E /* PSCellInfoModel.m in Sources */,
 				6416AD3B17A1FCA70090F883 /* PSFeedCellStore.m in Sources */,
 				646ED5A2179F3B9600BF997C /* main.m in Sources */,
 				F85481AD17A1F2CC0013BF2D /* PSStoryView.m in Sources */,
 				646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */,
+				281C4CDA17A1DFAB00BDEF13 /* PSDayPageViewController.m in Sources */,
 				F8479EB217A0936A000F68F8 /* PSHeaderViewController.m in Sources */,
 				646ED60B179F464F00BF997C /* PSGraphSelectionTableViewController.m in Sources */,
+				281C4CD717A1B12300BDEF13 /* PSDayScrollView.m in Sources */,
 				F8F0ADB017A09EB600F8122E /* PSStoryContentViewController.m in Sources */,
 				83977C5017A2F31C00770AD7 /* PSGraphMonthViewController.m in Sources */,
 				F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */,
