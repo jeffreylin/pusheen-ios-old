@@ -47,9 +47,6 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     [(UITableView *) [self tableView] setAllowsMultipleSelection:YES];
     [(UITableView *) [self tableView] setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, -2)];
     [(UITableView *) [self tableView] setSeparatorColor:[UIColor separatorColor]];
-
-
-
 }
 
 - (void)didReceiveMemoryWarning

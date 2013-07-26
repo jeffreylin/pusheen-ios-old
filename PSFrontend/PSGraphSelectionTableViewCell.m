@@ -25,6 +25,11 @@ static CGFloat padding = 12;
     [self.thumbnailView setImage:self.thumbnail];
     [self addSubview:self.thumbnailView];
     
+    self.checkmark = [UIImage imageNamed:@"checkmarkOpen"];
+    self.checkmarkView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width - 16 - padding, 8, 16, 16)];
+    [self.checkmarkView setImage:self.checkmark];
+    [self addSubview:self.checkmarkView];
+    
     return self;
 }
 

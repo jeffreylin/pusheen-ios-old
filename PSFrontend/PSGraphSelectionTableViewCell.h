@@ -14,5 +14,7 @@
 
 @property UIImage* thumbnail;
 @property UIImageView* thumbnailView;
+@property UIImage* checkmark;
+@property UIImageView* checkmarkView;
 
 @end
