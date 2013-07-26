@@ -49,7 +49,7 @@ static CGFloat graphHeight = 212;
 
     CGRect graphViewFrame = [[self view] frame];
     CGRect paddingViewFrame = CGRectMake(zero, zero, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight - tableViewOriginY);
-    CGRect contentViewFrame = CGRectMake(zero, zero + padding, paddingViewFrame.size.width, paddingViewFrame.size.height - padding);
+    CGRect contentViewFrame = CGRectMake(zero, zero, paddingViewFrame.size.width, paddingViewFrame.size.height);
     CGRect graphSelectionTableViewFrame = CGRectMake(zero, zero, contentViewFrame.size.width, contentViewFrame.size.height);
 
 
