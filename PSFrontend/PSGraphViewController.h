@@ -12,7 +12,8 @@
 
 @interface PSGraphViewController : UIViewController
 
-@property (strong, nonatomic) UIView *contentView;
+@property (strong, nonatomic) UIView *selectionContentView;
+@property (strong, nonatomic) UIView *graphView;
 @property (strong, nonatomic) PSGraphSelectionTableViewController *graphSelectionTableViewController;
 
 @end

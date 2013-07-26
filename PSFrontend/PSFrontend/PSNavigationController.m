@@ -24,17 +24,12 @@
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
                                                             }];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];
-    
-    // Throws exception in iOS 6 - but keeping the check breaks it in iOS 7
-    //if ([[UINavigationBar appearance] respondsToSelector:@selector(setBarTintColor:)]) {
-        [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
-    //}
-    [self.navigationController.navigationBar setTranslucent:NO];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor navigationBarColor]];
 }
 
 - (void)buttonPressed
 {
-    NSLog(@"Ayo! You pressed a button.");
+    
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{

@@ -2,8 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "navFeed.png"
+    },
+    {
+      "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "navSettings@2x.png"
+      "filename" : "navFeed@2x.png"
     }
   ],
   "info" : {

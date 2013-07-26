@@ -24,4 +24,6 @@
 
 + (UIColor *) navigationBarColor;
 
++ (UIColor *) separatorColor;
+
 @end

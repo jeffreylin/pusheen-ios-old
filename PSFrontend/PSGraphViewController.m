@@ -7,11 +7,14 @@
 //
 
 #import "PSGraphViewController.h"
+#import "PSDayTableViewController.h"
 #import "PSGraphSelectionTableViewController.h"
+#import "PSGraphMonthViewController.h"
+#import "UIColor+PSUIColorPalette.h"
 
 static CGFloat padding = 12;
 static CGFloat zero = 0.0;
-static CGFloat paddingViewOriginY = 53;
+static CGFloat paddingViewOriginY = 64;
 static CGFloat tableViewOriginY = 65;
 static CGFloat tableViewHeight = 291;
 static CGFloat graphHeight = 212;
@@ -26,6 +29,9 @@ static CGFloat graphHeight = 212;
 
 - (id)init {
     if (self = [super init]) {
+        _selectionContentView = nil;
+        _graphView = nil;
+        _graphSelectionTableViewController = nil;
     }
     return self;
 }
@@ -43,27 +49,53 @@ static CGFloat graphHeight = 212;
 //    CGFloat graphSelectionTableViewHeight = [_graphSelectionTableViewController tableViewHeight];
 
     CGRect graphViewFrame = [[self view] frame];
-    CGRect paddingViewFrame = CGRectMake(zero, zero, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight);
-    CGRect contentViewFrame = CGRectMake(zero + padding, zero + padding, paddingViewFrame.size.width - 2 * padding, paddingViewFrame.size.height - padding - 65);
+    CGRect paddingViewFrame = CGRectMake(zero, zero, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight - tableViewOriginY);
+    CGRect contentViewFrame = CGRectMake(zero, zero, paddingViewFrame.size.width, paddingViewFrame.size.height);
     CGRect graphSelectionTableViewFrame = CGRectMake(zero, zero, contentViewFrame.size.width, contentViewFrame.size.height);
-    NSLog(@"%@, %@, %@, %@", NSStringFromCGRect(graphViewFrame), NSStringFromCGRect(paddingViewFrame), NSStringFromCGRect(contentViewFrame), NSStringFromCGRect(graphSelectionTableViewFrame));
-
-    [[self view] setBackgroundColor:[UIColor purpleColor]];
 
 
     _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
-    [_paddingView setBackgroundColor:[UIColor blueColor]];
+    [_paddingView setBackgroundColor:[UIColor viewBackgroundColor]];
 
-    _contentView = [[UIView alloc] initWithFrame:contentViewFrame];
-    [_contentView setBackgroundColor:[UIColor greenColor]];
+    _selectionContentView = [[UIView alloc] initWithFrame:contentViewFrame];
+    [_selectionContentView setBackgroundColor:[UIColor viewBackgroundColor]];
 
-    UITableView *graphSelectionTableView = (UITableView *) [_graphSelectionTableViewController view];
+    UITableView *graphSelectionTableView = (UITableView *) [_graphSelectionTableViewController tableView];
     [graphSelectionTableView setFrame:graphSelectionTableViewFrame];
-    [graphSelectionTableView setBackgroundColor:[UIColor yellowColor]];
+    [graphSelectionTableView setBackgroundColor:[UIColor viewBackgroundColor]];
 
     [[self view] addSubview:_paddingView];
-    [_paddingView addSubview:_contentView];
-    [_contentView addSubview:[_graphSelectionTableViewController tableView]];
+    [_paddingView addSubview:_selectionContentView];
+    [_selectionContentView addSubview:[_graphSelectionTableViewController tableView]];
+
+    //Set up Navigation Bar:
+    self.title = @"DATA";
+    
+    [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    UIImage *imgNavLog = [UIImage imageNamed:@"navFeed"];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.leftBarButtonItem = leftButton;
+    
+    UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings"];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    //Add Month scroll view:
+    PSGraphMonthViewController *monthViewController = [[PSGraphMonthViewController alloc] init];
+    [monthViewController setFrame:CGRectMake(zero, contentViewFrame.size.height, contentViewFrame.size.width, 32.0)];
+    [monthViewController setBackgroundColor:[UIColor navigationBarColor]];
+    [[self view] addSubview:monthViewController];
+}
+
+- (void)buttonPressed
+{
+    NSLog(@"Switching to Day View.");
+    
+    PSDayTableViewController *dayTableViewController = [[PSDayTableViewController alloc] init];
+    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController pushViewController:dayTableViewController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,3 +105,4 @@ static CGFloat graphHeight = 212;
 }
 
 @end
+

@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) UIColor *color;
 
+@property UIImage* thumbnail;
+@property UIImageView* thumbnailView;
+
 @end

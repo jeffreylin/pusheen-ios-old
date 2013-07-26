@@ -8,6 +8,7 @@
 
 #import "PSFeedStoryCell.h"
 #import "PSFeedStoryHeader.h"
+#import "UIColor+PSUIColorPalette.h"
 
 @interface PSFeedStoryCell()
 
@@ -18,11 +19,11 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     if (self) {
-        self.content = [[UIView alloc] initWithFrame: CGRectMake(12, 12, self.frame.size.width - 24, self.frame.size.height - 24)];
-        self.header = [[PSFeedStoryHeader alloc]initWithFrame:self.content.frame]; //NEED TO CHANGE THIS LATER
-        [self.content addSubview: self.header];
-        
+        self.story = [[PSStoryView alloc]initWithFrame:CGRectMake(12, 12, self.frame.size.width - 24, 44.0 - 6)];//Hard coded fix later with autoresizing mask
+        [self setBackgroundColor: [UIColor viewBackgroundColor]];
+        [self addSubview:self.story];
     }
     return self;
 }
@@ -30,15 +31,22 @@
 - (void)setContentType: (contentType)type
 {
     self.typeOfContent = type;
-    [self.header setTypeOfContent:type];
+    [self.story setTypeOfContent:type];
     
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
+    [super setSelected:selected animated:animated];
+    
+    if (selected) {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit", @"Share", @"Delete", nil];
+        [sheet showInView:_parent.view];
+        _story.backgroundColor = [UIColor separatorColor];
+    } else {
+        _story.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 @end

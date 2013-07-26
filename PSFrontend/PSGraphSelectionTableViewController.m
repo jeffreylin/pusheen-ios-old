@@ -9,35 +9,28 @@
 #import "PSGraphSelectionTableViewController.h"
 #import "PSGraphSelectionTableViewCell.h"
 
+#import "UIColor+PSUIColorPalette.h"
 static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 
 
 
-@interface PSGraphSelectionTableViewController ()
+@interface PSGraphSelectionTableViewController () {
+}
+
 
 @end
 
 @implementation PSGraphSelectionTableViewController
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
-          CGRect currentFrame = [[self tableView] frame];
-//        [self tableView]
     }
     return self;
-}
-
-- (CGFloat)tableViewHeight {
-    if ([[self view] respondsToSelector:@selector(contentSize)]) {
-        UIScrollView *view = (UIScrollView *) [self view];
-        [view layoutIfNeeded];
-        return [view contentSize].height;
-    }
-    return 0.0;
 }
 
 - (void)viewDidLoad
@@ -49,6 +42,14 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    [(UITableView *) [self tableView] setAllowsSelection:YES];
+    [(UITableView *) [self tableView] setAllowsMultipleSelection:YES];
+    [(UITableView *) [self tableView] setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, -2)];
+    [(UITableView *) [self tableView] setSeparatorColor:[UIColor separatorColor]];
+
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,21 +74,26 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Generating new Cell!");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor orangeColor];
-    cell.textLabel.backgroundColor = [UIColor redColor];
-    cell.textLabel.text = @"Hello World!";
+    cell.backgroundColor = [UIColor whiteColor];
+//    cell.textLabel.backgroundColor = [UIColor redColor];
+//    [cell setAccessoryType:UITableViewCellAccessoryNone];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+    cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now -
 
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // height of rows
+    return 32;
 }
 
 /*

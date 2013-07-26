@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSGraphSelectionTableViewController : UITableViewController
+@interface PSGraphSelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-- (CGFloat)tableViewHeight;
 
 @end
