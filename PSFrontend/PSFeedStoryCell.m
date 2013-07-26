@@ -19,6 +19,7 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     if (self) {
         self.story = [[PSStoryView alloc]initWithFrame:CGRectMake(12, 12, self.frame.size.width - 24, 44.0 - 6)];//Hard coded fix later with autoresizing mask
         [self setBackgroundColor: [UIColor viewBackgroundColor]];
@@ -42,6 +43,9 @@
     if (selected) {
         UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit", @"Share", @"Delete", nil];
         [sheet showInView:_parent.view];
+        _story.backgroundColor = [UIColor separatorColor];
+    } else {
+        _story.backgroundColor = [UIColor whiteColor];
     }
 }
 

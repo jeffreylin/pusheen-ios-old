@@ -100,8 +100,6 @@
                 reuseIdentifier:@"UITableViewCell"];
     }
     cell.parent = self;
-    
-    //cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
 }
 
