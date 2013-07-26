@@ -15,6 +15,7 @@ extern UIColor* newStoryTextColor;
 extern UIColor* viewBackgroundColor;
 extern UIColor* navigationBarTitleColor;
 extern UIColor* navigationBarColor;
+extern UIColor* separatorColor;
 
 @implementation UIColor (PSUIColorPalette)
 
@@ -52,4 +53,10 @@ extern UIColor* navigationBarColor;
 {
     return [[UIColor alloc] initWithRed:0.106 green:0.106 blue:0.106 alpha:1.0];
 }
+
++ (UIColor *) separatorColor
+{
+    return [[UIColor alloc] initWithRed:0.80 green:0.80 blue:0.80 alpha:1.0];
+}
+
 @end
