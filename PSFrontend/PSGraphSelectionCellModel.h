@@ -13,8 +13,10 @@
 @property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *detailText;
-@property (strong, nonatomic) UIImage *accessoryImage;
+@property (strong, nonatomic) UIImage *accessoryImageUnselected;
+@property (strong, nonatomic) UIImage *accessoryImageSelected;
+@property (strong, nonatomic, readonly) NSUUID *uuid;
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title detailText:(NSString *)detailText andAccessoryImage:(NSString *)accessoryImage;
+- (id)initWithImage:(UIImage *)image title:(NSString *)title detailText:(NSString *)detailText accessoryImage:(UIImage *)accessoryImageUnselected andSelectedAccessoryImage:(UIImage *)accessoryImageSelected;
 
 @end

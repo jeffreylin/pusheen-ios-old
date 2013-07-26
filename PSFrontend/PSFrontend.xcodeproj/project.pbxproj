@@ -12,6 +12,7 @@
 		6416AD3217A1E9E40090F883 /* PSFeedCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3117A1E9E40090F883 /* PSFeedCellModel.m */; };
 		6416AD3517A1E9EF0090F883 /* PSGraphSelectionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3417A1E9EF0090F883 /* PSGraphSelectionCellModel.m */; };
 		6416AD3817A1ED9D0090F883 /* PSGraphSelectionStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3717A1ED9D0090F883 /* PSGraphSelectionStore.m */; };
+		6416AD3B17A1FCA70090F883 /* PSFeedCellStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6416AD3A17A1FCA70090F883 /* PSFeedCellStore.m */; };
 		646ED596179F3B9600BF997C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED595179F3B9600BF997C /* Foundation.framework */; };
 		646ED598179F3B9600BF997C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED597179F3B9600BF997C /* CoreGraphics.framework */; };
 		646ED59A179F3B9600BF997C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646ED599179F3B9600BF997C /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 		6416AD3417A1E9EF0090F883 /* PSGraphSelectionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionCellModel.m; sourceTree = "<group>"; };
 		6416AD3617A1ED9D0090F883 /* PSGraphSelectionStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSGraphSelectionStore.h; path = PSBackend/PSGraphSelectionStore.h; sourceTree = "<group>"; };
 		6416AD3717A1ED9D0090F883 /* PSGraphSelectionStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSGraphSelectionStore.m; path = PSBackend/PSGraphSelectionStore.m; sourceTree = "<group>"; };
+		6416AD3917A1FCA70090F883 /* PSFeedCellStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSFeedCellStore.h; path = PSBackend/PSFeedCellStore.h; sourceTree = "<group>"; };
+		6416AD3A17A1FCA70090F883 /* PSFeedCellStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSFeedCellStore.m; path = PSBackend/PSFeedCellStore.m; sourceTree = "<group>"; };
 		646ED592179F3B9600BF997C /* PSFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646ED595179F3B9600BF997C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		646ED597179F3B9600BF997C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 			children = (
 				6416AD3617A1ED9D0090F883 /* PSGraphSelectionStore.h */,
 				6416AD3717A1ED9D0090F883 /* PSGraphSelectionStore.m */,
+				6416AD3917A1FCA70090F883 /* PSFeedCellStore.h */,
+				6416AD3A17A1FCA70090F883 /* PSFeedCellStore.m */,
 			);
 			name = PSBackend;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6416AD3B17A1FCA70090F883 /* PSFeedCellStore.m in Sources */,
 				646ED5A2179F3B9600BF997C /* main.m in Sources */,
 				F85481AD17A1F2CC0013BF2D /* PSStoryView.m in Sources */,
 				646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */,

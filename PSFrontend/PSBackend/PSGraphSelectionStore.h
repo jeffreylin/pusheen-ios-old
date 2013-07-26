@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class PSGraphSelectionCellModel;
+
 @interface PSGraphSelectionStore : NSObject
+
++ (PSGraphSelectionStore *)graphSelectionStore;
+
+@property (strong, nonatomic) NSArray *typesOfContent;
+
+- (PSGraphSelectionCellModel *)modelAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
