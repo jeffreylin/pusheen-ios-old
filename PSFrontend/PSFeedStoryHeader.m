@@ -19,7 +19,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"%f", self.frame.size.height);
         [self setBackgroundColor:[UIColor whiteColor]];
         self.typeOfContent = TEXT_ENTRY;
 

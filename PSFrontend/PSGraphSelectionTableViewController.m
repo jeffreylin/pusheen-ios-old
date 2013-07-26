@@ -79,7 +79,7 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 //    cell.textLabel.backgroundColor = [UIColor redColor];
 //    [cell setAccessoryType:UITableViewCellAccessoryNone];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
-    cell.textLabel.text = [NSString stringWithFormat:@"Test Category %d", [indexPath row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now -
 
     return cell;
 }
@@ -88,6 +88,12 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // height of rows
+    return 32;
 }
 
 /*

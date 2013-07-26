@@ -19,6 +19,12 @@ static CGFloat padding = 12;
         _color = nil;
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
+    
+    self.thumbnail = [UIImage imageNamed:@"thumbCalendar"];
+    self.thumbnailView = [[UIImageView alloc] initWithFrame:CGRectMake(padding, 8, 16, 16)];
+    [self.thumbnailView setImage:self.thumbnail];
+    [self addSubview:self.thumbnailView];
+    
     return self;
 }
 

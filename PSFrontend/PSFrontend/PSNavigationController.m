@@ -29,7 +29,7 @@
 
 - (void)buttonPressed
 {
-    NSLog(@"Ayo! You pressed a button.");
+    
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{

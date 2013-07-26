@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSGraphMonthViewController : UIScrollView
+@interface PSGraphMonthViewController : UIScrollView 
 
 @end

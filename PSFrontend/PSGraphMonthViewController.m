@@ -21,12 +21,15 @@
         self.contentSize = CGSizeMake(1500.0, 32.0);
         self.frame = CGRectMake(0, 0, 500, 900);
         self.alwaysBounceHorizontal = YES;
-        self.alwaysBounceVertical = YES; 
-        NSLog(@"mysize: %f %f %f %f", self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
+        self.alwaysBounceVertical = YES;
     }
     return self;
 }
 
+- (void)viewDidLoad
+{
+
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
