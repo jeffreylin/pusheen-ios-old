@@ -12,6 +12,7 @@
 @interface PSDayTableViewController ()
 
 @property(nonatomic, retain) UIColor *separatorColor;
+//@property (strong,nonatomic) PSDayTableView *delegate;
 
 @end
 
@@ -22,6 +23,14 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
+        
+        /*UITableView *tableView = [[UITableView alloc] init];
+        tableView.backgroundColor = [UIColor yellowColor];
+        tableView.dataSource = self;
+        tableView.delegate = self;
+        [tableView reloadData];
+        self.view = tableView;*/
+        
     }
     return self;
 }
@@ -29,11 +38,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    
+    
     self.title = @"JULY 31 2013";
     
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
-    [self.tableView setSeparatorColor:[UIColor clearColor]];
+    //[self.tableView setSeparatorColor:[UIColor clearColor]];
+    
 
     UIImage *imgNavLog = [UIImage imageNamed:@"navLog-2"];
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
@@ -43,6 +59,11 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
     self.navigationItem.rightBarButtonItem = rightButton;
     
+    
+    
+    self.tableView = tableView;
+    self.view = tableView;
+    [tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -66,7 +87,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 10;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -88,7 +109,7 @@
     
     //cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
     return cell;
-
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,7 +117,41 @@
     // height of rows
     return 100.0;
 }
-
+/*
+- (void)viewWillAppear:(BOOL)animated
+{
+ 
+    [super viewWillAppear:animated];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.tableView reloadData];
+    self.view = self.tableView;
+ 
+}
+*/
+/*
+- (void)loadView
+{
+    [super loadView];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    //_tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    
+    //tableView.delegate = self;
+    
+    //tableView.dataSource = self;
+    
+    //[tableView reloadData];
+    
+    self.tableView = tableView;
+    
+    self.view = tableView;
+}
+*/
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
