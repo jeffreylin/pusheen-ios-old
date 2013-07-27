@@ -41,9 +41,9 @@
 {
     [super viewDidLoad];
 
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    tableView.dataSource = self;
-    tableView.delegate = self;
+    //UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    //tableView.dataSource = self;
+    //tableView.delegate = self;
     
     
     self.title = @"JULY 31 2013";
@@ -73,9 +73,9 @@
     self.navigationItem.rightBarButtonItem = rightButton;
     
     
-    self.tableView = tableView;
-    self.view = tableView;
-    [tableView reloadData];
+    //self.tableView = tableView;
+    //self.view = tableView;
+    //[tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -108,7 +108,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 10;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
