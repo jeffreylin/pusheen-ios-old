@@ -61,7 +61,7 @@
     
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
-    //[self.tableView setSeparatorColor:[UIColor clearColor]];
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
     
 
     UIImage *imgNavLog = [UIImage imageNamed:@"navLog"];
