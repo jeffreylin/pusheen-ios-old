@@ -8,17 +8,12 @@
 
 #import "PSGraphSelectionTableViewController.h"
 #import "PSGraphSelectionTableViewCell.h"
-
 #import "UIColor+PSUIColorPalette.h"
 static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
-
-
-
-@interface PSGraphSelectionTableViewController () {
+@interface PSGraphSelectionTableViewController ()
+{
 }
-
-
 @end
 
 @implementation PSGraphSelectionTableViewController
@@ -29,6 +24,7 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     self = [super initWithStyle:style];
     if (self) {
         [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
+        self.selectionCount = 0;
     }
     return self;
 }
@@ -71,13 +67,11 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    PSGraphSelectionTableViewCell *cell = (PSGraphSelectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-//    cell.textLabel.backgroundColor = [UIColor redColor];
-//    [cell setAccessoryType:UITableViewCellAccessoryNone];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
     cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now -
-
+    cell.root = self;
     return cell;
 }
 

@@ -10,5 +10,6 @@
 
 @interface PSGraphSelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property int selectionCount;
 
 @end
