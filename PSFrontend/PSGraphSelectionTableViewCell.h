@@ -16,6 +16,8 @@
 @property UIImage* thumbnail;
 @property UIImage* checkmark;
 @property UIImage* checkmarkBlue;
+@property UIImage* checkmarkRed;
+@property UIImage* checkmarkGreen;
 @property UIImage* checkmarkClosed;
 @property UIImageView* thumbnailView;
 @property UIImageView* checkmarkView;

@@ -76,15 +76,24 @@ static int MAX_CELLS_CHECKED = 3;
     PSGraphSelectionTableViewCell *cell = (PSGraphSelectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
-    cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now -
+    cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now.
     
     //Update images.
     if ([self.cellData[indexPath.row] isEqual: @"-1"]) {
         cell.checkmarkView.image = cell.checkmarkClosed;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
     } else if ([self.cellData[indexPath.row] isEqual: @"0"]) {
         cell.checkmarkView.image = cell.checkmark;
-    } else {
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+    } else if ([self.cellData[indexPath.row] isEqual: @"1"]) {
         cell.checkmarkView.image = cell.checkmarkBlue;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+    } else if ([self.cellData[indexPath.row] isEqual: @"2"]) {
+        cell.checkmarkView.image = cell.checkmarkRed;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+    } else if ([self.cellData[indexPath.row] isEqual: @"3"]) {
+        cell.checkmarkView.image = cell.checkmarkGreen;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
     }
 
     return cell;
@@ -94,33 +103,55 @@ static int MAX_CELLS_CHECKED = 3;
 {
     if (self.numCellsChecked < MAX_CELLS_CHECKED) {
         self.numCellsChecked++;
-        NSLog(@"Numbers checked: %d", self.numCellsChecked);
-        NSString *dataValue = [NSString stringWithFormat:@"%d", self.numCellsChecked];
+        
+        NSString *dataValue = [NSString stringWithFormat:@"%d", [self nextAvailableCheckmark]];
         [self.cellData setObject:dataValue atIndexedSubscript:indexPath.row];
         
         if (self.numCellsChecked == MAX_CELLS_CHECKED) {
-            NSLog(@"At capacity! Filling up to -1s.");
             for (int i = 0; i < NUM_ROWS; i++) {
                 if ([self.cellData[i] isEqual: @"0"]) {
                     [self.cellData replaceObjectAtIndex:i withObject:@"-1"];
                 }
             }
         }
-        NSLog(@"%@", self.cellData);
     }
     [self updateCellImage];
-
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.cellData[indexPath.row] > 0) {
+    if (![self.cellData[indexPath.row] isEqual:@"0"] && ![self.cellData[indexPath.row] isEqual:@"-1"] ) {
         [self.cellData replaceObjectAtIndex:indexPath.row withObject:@"0"];
         self.numCellsChecked--;
         
-        NSLog(@"Numbers checked: %d", self.numCellsChecked);
-        NSLog(@"%@", self.cellData);
+        //Reset blocked checkboxes into open checkboxes.
+        if (self.numCellsChecked < MAX_CELLS_CHECKED) {
+            for (int i = 0; i < NUM_ROWS; i++) {
+                if ([self.cellData[i] isEqual: @"-1"]) {
+                    [self.cellData replaceObjectAtIndex:i withObject:@"0"];
+                }
+            }
+        }
     }
     [self updateCellImage];
+}
+
+- (int)nextAvailableCheckmark
+{
+    int currentCheckmark;
+    for (currentCheckmark = 1; currentCheckmark  < MAX_CELLS_CHECKED; currentCheckmark ++) {
+        BOOL found = NO;
+        NSString *currentCheckmarkText = [NSString stringWithFormat:@"%d", currentCheckmark ];
+        for (int j = 0; j < NUM_ROWS; j++) {
+            if ([self.cellData[j] isEqual:currentCheckmarkText]) {
+                found = YES;
+                break;
+            }
+        }
+        if (found == NO){
+            return currentCheckmark;
+        }
+    }
+    return currentCheckmark ;
 }
 
 - (void)updateCellImage
@@ -130,10 +161,19 @@ static int MAX_CELLS_CHECKED = 3;
         
         if ([self.cellData[indexPath.row] isEqual: @"-1"]) {
             cell.checkmarkView.image = cell.checkmarkClosed;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
         } else if ([self.cellData[indexPath.row] isEqual: @"0"]) {
             cell.checkmarkView.image = cell.checkmark;
-        } else {
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+        } else if ([self.cellData[indexPath.row] isEqual: @"1"]) {
             cell.checkmarkView.image = cell.checkmarkBlue;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+        } else if ([self.cellData[indexPath.row] isEqual: @"2"]) {
+            cell.checkmarkView.image = cell.checkmarkRed;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+        } else if ([self.cellData[indexPath.row] isEqual: @"3"]) {
+            cell.checkmarkView.image = cell.checkmarkGreen;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
         }
     }
 

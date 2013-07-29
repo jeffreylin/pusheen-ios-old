@@ -86,8 +86,6 @@
 
 - (void)buttonPressed
 {
-    NSLog(@"Switching to Graph View.");
-    
     PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
     [self.navigationController popViewControllerAnimated:NO];
     [self.navigationController pushViewController:graphViewController animated:NO];

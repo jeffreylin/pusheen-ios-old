@@ -23,6 +23,8 @@ static CGFloat padding = 12;
     self.thumbnail = [UIImage imageNamed:@"thumbCalendar"];
     self.checkmark = [UIImage imageNamed:@"checkmarkOpen"];
     self.checkmarkBlue = [UIImage imageNamed:@"checkmarkBlue"];
+    self.checkmarkRed = [UIImage imageNamed:@"checkmarkRed"];
+    self.checkmarkGreen = [UIImage imageNamed:@"checkmarkGreen"];
     self.checkmarkClosed = [UIImage imageNamed:@"checkmarkClosed"];
     
     self.thumbnailView = [[UIImageView alloc] initWithFrame:CGRectMake(padding, 8, 16, 16)];
@@ -44,13 +46,6 @@ static CGFloat padding = 12;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
-    
-    if (selected) {
-        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
-    }
-    else {
-        self.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
-    }
 }
 
 @end
