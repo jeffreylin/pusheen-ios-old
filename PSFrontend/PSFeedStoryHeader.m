@@ -18,7 +18,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.infoModel = model;
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[UIColor clearColor]];
        
     }
     return self;
