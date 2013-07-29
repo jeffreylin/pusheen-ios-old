@@ -10,7 +10,8 @@
 #import "PSGraphViewController.h"
 #import "UIColor+PSUIColorPalette.h"
 #import "PSFeedStoryCell.h"
-
+#import "PSFeedCellModel.h"
+#import "PSFeedEnums.h"
 @interface PSDayTableViewController ()
 {
     NSUInteger _pageIndex;
@@ -122,13 +123,16 @@
 {
     static NSString *CellIdentifier = @"UITableViewCell";
     PSFeedStoryCell *cell = (PSFeedStoryCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
+    PSFeedCellModel *placeholderModel = [[PSFeedCellModel alloc]
+                                         initWithContentType:TEXT_ENTRY title:@"Title" andTime:[NSDate date]];
+    placeholderModel.place = @"Facebook Campus";
+    placeholderModel.thumbnail = [UIImage imageNamed:@"thumbCalendar"];
     if (!cell) {
         cell = [[PSFeedStoryCell alloc]
-                initWithStyle:UITableViewCellStyleDefault
-                reuseIdentifier:@"UITableViewCell"];
+                initWithModel:placeholderModel style:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
+        
     }
-    cell.parent = self;
+    cell.delegate = self;
     return cell;
 
 }

@@ -8,16 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PSFeedEnums.h"
-
+#import "PSFeedCellModel.h"
+#import "PSFeedCellModel.h"
 @interface PSFeedStoryHeader : UIView
-@property contentType typeOfContent;
-@property NSString* title;
-@property NSDate* timestamp;
-@property NSString* place;
-@property UIImage* thumbnail;
 @property UILabel* titleLabel;
 @property UILabel* timestampLocationLabel;
 @property UIImageView* thumbnailView;
-
-
+@property PSFeedCellModel* infoModel;
+- (id)initWithFrame:(CGRect)frame andModel: (PSFeedCellModel *)model;
 @end

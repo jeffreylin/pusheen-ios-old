@@ -16,8 +16,10 @@
 @property (nonatomic) contentType typeOfContent;
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* textContent;
+@property (strong, nonatomic) NSString* place;
 @property (strong, nonatomic) NSDate* timestamp;
 @property (strong, nonatomic, readonly) NSUUID *uuid;
+@property (strong, nonatomic) UIImage* thumbnail;
 
 - (id)initWithContentType:(contentType)type title:(NSString *)title andTime:(NSDate *)time;
 

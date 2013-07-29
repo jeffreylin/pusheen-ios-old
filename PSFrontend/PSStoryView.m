@@ -15,12 +15,17 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setBackgroundColor:[UIColor whiteColor]];
-        self.header = [[PSFeedStoryHeader alloc] initWithFrame:CGRectMake(12, 12, self.frame.size.width - 24, 32)];
-        [self addSubview:self.header];
+        
     }
     return self;
 }
-
+- (void)layoutSubviews
+{
+    self.header = [[PSFeedStoryHeader alloc]
+                   initWithFrame:CGRectMake(12, 8, self.frame.size.width - 24, self.frame.size.height  - 8)
+                   andModel:self.infoModel];
+    [self addSubview:self.header];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
