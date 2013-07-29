@@ -8,6 +8,8 @@
 
 #import "PSDayPageViewController.h"
 #import "PSDayTableViewController.h"
+#import "UIColor+PSUIColorPalette.h"
+#import "PSGraphViewController.h"
 
 @interface PSDayPageViewController ()
 
@@ -38,7 +40,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.title = @"JULY 31 2013";
+    
+    //Get the current date.
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    //Format the date into a string.
+    [dateFormat setDateStyle: NSDateFormatterMediumStyle];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    dateString = dateString.uppercaseString;
+    NSString *formattedString = [dateString stringByReplacingOccurrencesOfString:@"," withString:@""];
+    self.title = formattedString;
+    
+    [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
+    [self.navigationController.navigationBar setTranslucent:NO];
+    
+    UIImage *imgNavLog = [UIImage imageNamed:@"navLog"];
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.leftBarButtonItem = leftButton;
+    
+    UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings"];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+}
+
+- (void)buttonPressed
+{
+    PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
+    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController pushViewController:graphViewController animated:NO];
 }
 
 - (void)didReceiveMemoryWarning

@@ -44,59 +44,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    //UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    //tableView.dataSource = self;
-    //tableView.delegate = self;
     
-    
-    self.title = @"JULY 31 2013";
     self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, -35, 0);
-    
-    //Get the current date.
-    NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    //Format the date into a string.
-    [dateFormat setDateStyle: NSDateFormatterMediumStyle];
-    NSString *dateString = [dateFormat stringFromDate:date];
-    dateString = dateString.uppercaseString;
-    NSString *formattedString = [dateString stringByReplacingOccurrencesOfString:@"," withString:@""];
-    self.title = formattedString;
-    
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
-    [self.navigationController.navigationBar setTranslucent:NO];
     [self.tableView setSeparatorColor:[UIColor clearColor]];
-    
-
-    UIImage *imgNavLog = [UIImage imageNamed:@"navLog"];
-    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:(imgNavLog) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
-    self.navigationItem.leftBarButtonItem = leftButton;
-    
-    UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings"];
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
-    self.navigationItem.rightBarButtonItem = rightButton;
-    
-    
-    //self.tableView = tableView;
-    //self.view = tableView;
-    //[tableView reloadData];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-}
-
-- (void)buttonPressed
-{
-    PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
-    [self.navigationController popViewControllerAnimated:NO];
-    [self.navigationController pushViewController:graphViewController animated:NO];
-
-    //[UIView transitionFromView:self.view toView:graphViewController.view duration:0.5
-    //                   options:UIViewAnimationOptionTransitionFlipFromLeft
-    //                completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
