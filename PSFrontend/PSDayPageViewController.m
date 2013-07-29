@@ -42,18 +42,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"JULY 31 2013";
     
-    //Get the current date.
-    NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    //Format the date into a string.
-    [dateFormat setDateStyle: NSDateFormatterMediumStyle];
-    NSString *dateString = [dateFormat stringFromDate:date];
-    dateString = dateString.uppercaseString;
-    NSString *formattedString = [dateString stringByReplacingOccurrencesOfString:@"," withString:@""];
-    self.title = formattedString;
-    
+    _pageDate = [NSDate date];
+    [self setTitleFromDate:_pageDate];
+
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
     
@@ -64,6 +56,18 @@
     UIImage *imgNavSettings = [UIImage imageNamed:@"navSettings"];
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
     self.navigationItem.rightBarButtonItem = rightButton;
+}
+
+- (void)setTitleFromDate:(NSDate *)date
+{
+    //Get the current date.
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    //Format the date into a string.
+    [dateFormat setDateStyle: NSDateFormatterMediumStyle];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    dateString = dateString.uppercaseString;
+    NSString *formattedString = [dateString stringByReplacingOccurrencesOfString:@"," withString:@""];
+    self.title = formattedString;
 }
 
 - (void)buttonPressed
@@ -82,12 +86,25 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pvc viewControllerBeforeViewController:(PSDayTableViewController *)vc
 {
     NSUInteger index = vc.pageIndex;
+    
+    NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
+    dayComponent.day = -1;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    _pageDate = [calendar dateByAddingComponents:dayComponent toDate:_pageDate options:0];
+    [self setTitleFromDate:_pageDate];
     return [PSDayTableViewController psDayTableViewControllerForPageIndex:(index - 1)];
+
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pvc viewControllerAfterViewController:(PSDayTableViewController *)vc
 {
     NSUInteger index = vc.pageIndex;
+    
+    NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
+    dayComponent.day = 1;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    _pageDate = [calendar dateByAddingComponents:dayComponent toDate:_pageDate options:0];
+    [self setTitleFromDate:_pageDate];
     return [PSDayTableViewController psDayTableViewControllerForPageIndex:(index + 1)];
 }
 

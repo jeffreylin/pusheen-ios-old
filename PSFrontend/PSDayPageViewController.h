@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PSDayPageViewController : UIPageViewController <UIPageViewControllerDataSource>
-
+@property NSDate* pageDate;
 @end
