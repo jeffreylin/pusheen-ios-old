@@ -40,7 +40,7 @@
     [super viewDidLoad];
     
     self.title = @"JULY 31 2013";
-    self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, -35, 0);
+    //self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, -35, 0);
     
     //Get the current date.
     NSDate *date = [NSDate date];
@@ -72,9 +72,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     NSLog(@"%@", self.view);
     NSLog(@"%@", self.tableView);
-    CGRect currentFrame = self.tableView.frame;
-    self.tableView.frame = CGRectMake(0, 200, currentFrame.size.width, 100);
-    self.tableView.backgroundColor = [UIColor blueColor];
+    //CGRect currentFrame = self.tableView.frame;
+    //self.tableView.frame = CGRectMake(0, 0, currentFrame.size.width, 100);
+    //self.tableView.backgroundColor = [UIColor blueColor];
 
 }
 
