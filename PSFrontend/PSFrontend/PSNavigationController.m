@@ -20,7 +20,7 @@
     [super viewDidLoad];
     [self.navigationBar setOpaque:YES];
     [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            UITextAttributeFont: [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0f],
+                                                            UITextAttributeFont: [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:24.0f],
                                                             UITextAttributeTextColor: [UIColor navigationBarTitleColor],
                                                             }];
     [[UINavigationBar appearance] setBackgroundColor:[UIColor navigationBarColor]];

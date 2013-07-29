@@ -9,7 +9,7 @@
 #import "PSGraphViewController.h"
 #import "PSDayTableViewController.h"
 #import "PSGraphSelectionTableViewController.h"
-#import "PSGraphMonthViewController.h"
+#import "PSGraphSCrollViewController.h"
 #import "UIColor+PSUIColorPalette.h"
 
 static CGFloat padding = 12;
@@ -83,10 +83,10 @@ static CGFloat graphHeight = 212;
     self.navigationItem.rightBarButtonItem = rightButton;
     
     //Add Month scroll view:
-    PSGraphMonthViewController *monthViewController = [[PSGraphMonthViewController alloc] init];
-    [monthViewController setFrame:CGRectMake(zero, contentViewFrame.size.height, contentViewFrame.size.width, 32.0)];
-    [monthViewController setBackgroundColor:[UIColor navigationBarColor]];
-    [[self view] addSubview:monthViewController];
+    PSGraphScrollViewController *scrollViewController = [[PSGraphScrollViewController alloc] init];
+    [scrollViewController setFrame:CGRectMake(zero, contentViewFrame.size.height + 1, contentViewFrame.size.width, graphHeight)];
+    [scrollViewController setBackgroundColor:[UIColor navigationBarColor]];
+    [[self view] addSubview:scrollViewController];
 }
 
 - (void)buttonPressed
