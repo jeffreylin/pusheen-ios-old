@@ -11,7 +11,9 @@
 #import "UIColor+PSUIColorPalette.h"
 #import "PSFeedStoryCell.h"
 @interface PSDayTableViewController ()
-
+{
+    NSUInteger _pageIndex;
+}
 @property(nonatomic, retain) UIColor *separatorColor;
 //@property (strong,nonatomic) PSDayTableView *delegate;
 
@@ -41,9 +43,9 @@
 {
     [super viewDidLoad];
 
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    tableView.dataSource = self;
-    tableView.delegate = self;
+    //UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    //tableView.dataSource = self;
+    //tableView.delegate = self;
     
     
     self.title = @"JULY 31 2013";
@@ -73,9 +75,9 @@
     self.navigationItem.rightBarButtonItem = rightButton;
     
     
-    self.tableView = tableView;
-    self.view = tableView;
-    [tableView reloadData];
+    //self.tableView = tableView;
+    //self.view = tableView;
+    //[tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -108,13 +110,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 10;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of cell we want.
-    return 13;
+    return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,6 +139,32 @@
     // height of rows
     return 44.0;
 }
+
+
++ (PSDayTableViewController *)psDayTableViewControllerForPageIndex:(NSUInteger)pageIndex
+{
+    if (pageIndex < 5)//[PSDayScrollView tableCount]
+    {
+        return [[PSDayTableViewController alloc] initWithPageIndex:pageIndex];//??
+    }
+    return nil;
+}
+
+- (id)initWithPageIndex:(NSInteger)pageIndex
+{
+    self = [super initWithNibName:nil bundle:nil];
+    if (self)
+    {
+        _pageIndex = pageIndex;
+    }
+    return self;
+}
+
+- (NSInteger)pageIndex
+{
+    return _pageIndex;
+}
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated

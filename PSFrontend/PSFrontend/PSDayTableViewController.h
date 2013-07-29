@@ -10,5 +10,8 @@
 
 @interface PSDayTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
++ (PSDayTableViewController *)psDayTableViewControllerForPageIndex:(NSUInteger)pageIndex;
+
+- (NSInteger)pageIndex;
 
 @end

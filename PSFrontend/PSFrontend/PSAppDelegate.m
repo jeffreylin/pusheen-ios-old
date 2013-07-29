@@ -30,14 +30,9 @@
     
     
     PSDayPageViewController *feedViewController = [[PSDayPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
 
     // Comment out to swap between Feed View and Graph View:
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedViewController];
-    //PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:graphViewController];
-
-    PSDayTableViewController *feedTableViewController = [[PSDayTableViewController alloc] init];
-    PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedTableViewController];
 
 
     [[self window] setRootViewController:navController];

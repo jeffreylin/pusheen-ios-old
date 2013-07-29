@@ -7,7 +7,7 @@
 //
 
 #import "PSDayPageViewController.h"
-#import "PSDayViewController.h"
+#import "PSDayTableViewController.h"
 
 @interface PSDayPageViewController ()
 
@@ -21,12 +21,12 @@
     if (self) {
         // Custom initialization
         NSLog(@"flag1");
-        PSDayViewController *pageZero = [PSDayViewController psDayViewControllerForPageIndex:0];
+        PSDayTableViewController *pageZero = [PSDayTableViewController psDayTableViewControllerForPageIndex:0];
         
         if (pageZero != nil)
         {
             // assign the first page to the pageViewController (our rootViewController)
-            self.dataSource = self;//??
+            self.dataSource = self;
             NSLog(@"%@", self.dataSource);
             [super setViewControllers:@[pageZero]
                             direction:UIPageViewControllerNavigationDirectionForward
@@ -49,16 +49,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pvc viewControllerBeforeViewController:(PSDayViewController *)vc
+- (UIViewController *)pageViewController:(UIPageViewController *)pvc viewControllerBeforeViewController:(PSDayTableViewController *)vc
 {
     NSUInteger index = vc.pageIndex;
-    return [PSDayViewController psDayViewControllerForPageIndex:(index - 1)];
+    return [PSDayTableViewController psDayTableViewControllerForPageIndex:(index - 1)];
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pvc viewControllerAfterViewController:(PSDayViewController *)vc
+- (UIViewController *)pageViewController:(UIPageViewController *)pvc viewControllerAfterViewController:(PSDayTableViewController *)vc
 {
     NSUInteger index = vc.pageIndex;
-    return [PSDayViewController psDayViewControllerForPageIndex:(index + 1)];
+    return [PSDayTableViewController psDayTableViewControllerForPageIndex:(index + 1)];
 }
 
 

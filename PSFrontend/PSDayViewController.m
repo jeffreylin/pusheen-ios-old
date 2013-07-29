@@ -29,7 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    PSDayScrollView *scrollView = [[PSDayScrollView alloc] init];
+    scrollView.index = _pageIndex;
+    NSLog(@"this is pageindex: %d", _pageIndex);
+    scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.view = scrollView;
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,14 +66,8 @@
     return _pageIndex;
 }
 
-- (void)loadView
-{
-    PSDayScrollView *scrollView = [[PSDayScrollView alloc] init];
-    scrollView.index = _pageIndex;
-    NSLog(@"this is pageindex: %d", _pageIndex);
-    scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.view = scrollView;
-}
+
+    
 
 // (this can also be defined in Info.plist via UISupportedInterfaceOrientations)
 - (NSUInteger)supportedInterfaceOrientations

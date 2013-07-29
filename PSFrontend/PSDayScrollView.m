@@ -9,14 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "PSDayScrollView.h"
 #import "PSDayTableViewController.h"
+#import "PSGraphSelectionTableViewController.h"
 
 static NSArray *_data = nil;
 
 @implementation PSDayScrollView
 
-- (id)initWithFrame:(CGRect)frame
+- (id)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
@@ -58,6 +59,17 @@ static NSArray *_data = nil;
 {
     if (!_data) {
         
+        PSGraphSelectionTableViewController *gvc1 = [[PSGraphSelectionTableViewController alloc] init];
+        NSLog(@"flag10");
+        UITableView *gv1 = gvc1.tableView;
+        gv1.backgroundColor = [UIColor redColor];
+        PSGraphSelectionTableViewController *gvc2 = [[PSGraphSelectionTableViewController alloc] init];
+        UITableView *gv2 = gvc2.tableView;
+        gv2.backgroundColor = [UIColor greenColor];
+        PSGraphSelectionTableViewController *gvc3 = [[PSGraphSelectionTableViewController alloc] init];
+        UITableView *gv3 = gvc3.tableView;
+        gv3.backgroundColor = [UIColor blueColor];
+        /*
         PSDayTableViewController *tvc1 = [[PSDayTableViewController alloc] init];
         UITableView *tv1 = tvc1.tableView;
         tv1.backgroundColor = [UIColor redColor];
@@ -69,8 +81,8 @@ static NSArray *_data = nil;
         PSDayTableViewController *tvc3 = [[PSDayTableViewController alloc] init];
         UITableView *tv3 = tvc3.tableView;
         tv3.backgroundColor = [UIColor blueColor];
-
-        _data = @[tv1, tv2, tv3];
+         */
+        _data = @[gv1, gv2, gv3];
     }
     
     /*
