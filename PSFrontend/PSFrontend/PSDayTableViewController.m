@@ -30,12 +30,6 @@
     if (self) {
         // Custom initialization
         
-        /*UITableView *tableView = [[UITableView alloc] init];
-        tableView.backgroundColor = [UIColor yellowColor];
-        tableView.dataSource = self;
-        tableView.delegate = self;
-        [tableView reloadData];
-        self.view = tableView;*/
         
     }
     return self;
@@ -44,11 +38,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    //UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    //tableView.dataSource = self;
-    //tableView.delegate = self;
-    
     
     self.title = @"JULY 31 2013";
     self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, -35, 0);
@@ -63,7 +52,7 @@
     NSString *formattedString = [dateString stringByReplacingOccurrencesOfString:@"," withString:@""];
     self.title = formattedString;
     
-    [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
+    [[self view] setBackgroundColor:[UIColor purpleColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
     [self.tableView setSeparatorColor:[UIColor clearColor]];
     
@@ -76,15 +65,16 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:(imgNavSettings) style:UIBarButtonItemStylePlain target:self action:@selector(buttonPressed)];
     self.navigationItem.rightBarButtonItem = rightButton;
     
-    
-    //self.tableView = tableView;
-    //self.view = tableView;
-    //[tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSLog(@"%@", self.view);
+    NSLog(@"%@", self.tableView);
+    CGRect currentFrame = self.tableView.frame;
+    self.tableView.frame = CGRectMake(0, 200, currentFrame.size.width, 100);
+    self.tableView.backgroundColor = [UIColor blueColor];
 
 }
 
@@ -116,7 +106,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of cell we want.
-    return 20;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -168,43 +158,6 @@
 {
     return _pageIndex;
 }
-
-
-/*
-- (void)viewWillAppear:(BOOL)animated
-{
- 
-    [super viewWillAppear:animated];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    [self.tableView reloadData];
-    self.view = self.tableView;
- 
-}
-*/
-/*
-- (void)loadView
-{
-    [super loadView];
-    
-    UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
-    //_tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    
-    //tableView.delegate = self;
-    
-    //tableView.dataSource = self;
-    
-    //[tableView reloadData];
-    
-    self.tableView = tableView;
-    
-    self.view = tableView;
-}
-*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -30,6 +30,8 @@
                             direction:UIPageViewControllerNavigationDirectionForward
                              animated:NO
                            completion:NULL];
+            NSLog(@"%@", self.view);
+            self.view.backgroundColor = [UIColor yellowColor];
         }
     }
     return self;
