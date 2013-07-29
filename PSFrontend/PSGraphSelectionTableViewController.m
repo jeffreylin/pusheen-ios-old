@@ -9,7 +9,10 @@
 #import "PSGraphSelectionTableViewController.h"
 #import "PSGraphSelectionTableViewCell.h"
 #import "UIColor+PSUIColorPalette.h"
+
 static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
+static int NUM_ROWS = 15;
+static int MAX_CELLS_CHECKED = 3;
 
 @interface PSGraphSelectionTableViewController ()
 {
@@ -18,13 +21,13 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 
 @implementation PSGraphSelectionTableViewController
 
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
-        self.selectionCount = 0;
+        self.cellData = [[NSMutableArray alloc] init];
+        self.numCellsChecked = 0;
     }
     return self;
 }
@@ -62,7 +65,10 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 10;
+    for (int i = 0; i < NUM_ROWS; i++) {
+        [self.cellData addObject:@"0"];
+    }
+    return NUM_ROWS;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,19 +77,70 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     cell.backgroundColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
     cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now -
-    cell.root = self;
+    
+    //Update images.
+    if ([self.cellData[indexPath.row] isEqual: @"-1"]) {
+        cell.checkmarkView.image = cell.checkmarkClosed;
+    } else if ([self.cellData[indexPath.row] isEqual: @"0"]) {
+        cell.checkmarkView.image = cell.checkmark;
+    } else {
+        cell.checkmarkView.image = cell.checkmarkBlue;
+    }
+
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.numCellsChecked < MAX_CELLS_CHECKED) {
+        self.numCellsChecked++;
+        NSLog(@"Numbers checked: %d", self.numCellsChecked);
+        NSString *dataValue = [NSString stringWithFormat:@"%d", self.numCellsChecked];
+        [self.cellData setObject:dataValue atIndexedSubscript:indexPath.row];
+        
+        if (self.numCellsChecked == MAX_CELLS_CHECKED) {
+            NSLog(@"At capacity! Filling up to -1s.");
+            for (int i = 0; i < NUM_ROWS; i++) {
+                if ([self.cellData[i] isEqual: @"0"]) {
+                    [self.cellData replaceObjectAtIndex:i withObject:@"-1"];
+                }
+            }
+        }
+        NSLog(@"%@", self.cellData);
+    }
+    [self updateCellImage];
+
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.cellData[indexPath.row] > 0) {
+        [self.cellData replaceObjectAtIndex:indexPath.row withObject:@"0"];
+        self.numCellsChecked--;
+        
+        NSLog(@"Numbers checked: %d", self.numCellsChecked);
+        NSLog(@"%@", self.cellData);
+    }
+    [self updateCellImage];
+}
+
+- (void)updateCellImage
+{
+    for (PSGraphSelectionTableViewCell *cell in self.tableView.visibleCells) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        
+        if ([self.cellData[indexPath.row] isEqual: @"-1"]) {
+            cell.checkmarkView.image = cell.checkmarkClosed;
+        } else if ([self.cellData[indexPath.row] isEqual: @"0"]) {
+            cell.checkmarkView.image = cell.checkmark;
+        } else {
+            cell.checkmarkView.image = cell.checkmarkBlue;
+        }
+    }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // height of rows
     return 32;
 }
 
