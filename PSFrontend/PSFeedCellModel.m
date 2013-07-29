@@ -15,13 +15,27 @@
 
 @implementation PSFeedCellModel
 
-- (id)initWithContentType:(contentType)type title:(NSString *)title andTime:(NSDate *)time
-{
+- (id)init {
+    if (self = [self initWithTimeCreated:[NSDate date]]) {
+
+    }
+    return self;
+}
+
+- (id)initWithTimeCreated:(id)timeCreated {
     if (self = [super init]) {
-        self.typeOfContent = type;
-        self.title = title;
-        self.timestamp = time;
+        _timeCreated = timeCreated;
         _uuid = [NSUUID UUID];
+    }
+    return self;
+}
+
+- (id)initWithContentType:(contentType)type title:(NSString *)title timeOfEvent:(NSDate *)timeOfEvent andTimeCreated:(NSDate *)timeCreated
+{
+    if (self = [self initWithTimeCreated:timeCreated]) {
+        _typeOfContent = type;
+        _title = title;
+        _timeOfEvent = timeOfEvent;
     }
     return self;
 }

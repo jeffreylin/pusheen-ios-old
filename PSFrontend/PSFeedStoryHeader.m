@@ -43,7 +43,7 @@
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"hh:ss a"];//need to check timezone, not sure how to capitalize AM/PM
-    NSString* time = [dateFormatter stringFromDate:self.infoModel.timestamp];
+    NSString* time = [dateFormatter stringFromDate:self.infoModel.timeOfEvent];
     NSString* placeAndTime = [NSString stringWithFormat:@" - %@ at %@",time, self.infoModel.place];
     CGSize timestampSize = [placeAndTime sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.0f]];
     self.timestampLocationLabel =

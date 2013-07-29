@@ -113,8 +113,7 @@
 {
     static NSString *CellIdentifier = @"UITableViewCell";
     PSFeedStoryCell *cell = (PSFeedStoryCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    PSFeedCellModel *placeholderModel = [[PSFeedCellModel alloc]
-                                         initWithContentType:TEXT_ENTRY title:@"Title" andTime:[NSDate date]];
+    PSFeedCellModel *placeholderModel = [[PSFeedCellModel alloc] initWithContentType:TEXT_ENTRY title:@"Title" timeOfEvent:[NSDate date] andTimeCreated:[NSDate date]];
     placeholderModel.place = @"Facebook Campus";
     placeholderModel.thumbnail = [UIImage imageNamed:@"thumbCalendar"];
     if (!cell) {

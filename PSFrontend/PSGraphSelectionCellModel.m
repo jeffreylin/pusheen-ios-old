@@ -10,14 +10,14 @@
 
 @implementation PSGraphSelectionCellModel
 
-- (id)initWithImage:(UIImage *)image title:(NSString *)title detailText:(NSString *)detailText accessoryImage:(UIImage *)accessoryImageUnselected andSelectedAccessoryImage:(UIImage *)accessoryImageSelected {
+- (id)initWithImage:(UIImage *)image title:(NSString *)title detailText:(NSString *)detailText accessoryImage:(UIImage *)accessoryImage andLinking:(BOOL)needsLink{
     if (self = [super init]) {
         _image = image;
         _title = title;
         _detailText = detailText;
-        _accessoryImageUnselected = accessoryImageUnselected;
-        _accessoryImageSelected = accessoryImageSelected;
+        _accessoryImage = accessoryImage;
         _uuid = [NSUUID UUID];
+        _needsLink = needsLink;
     }
     return self;
 }
