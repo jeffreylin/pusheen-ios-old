@@ -32,6 +32,7 @@
 		646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED60D179F48B700BF997C /* PSNavigationController.m */; };
 		646ED611179F4BA100BF997C /* PSGraphSelectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */; };
 		648A045217A04A3800DD0250 /* UIColor+PSUIColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */; };
+		6496A6BB17A6CFF50015A624 /* PSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6496A6BA17A6CFF50015A624 /* PSConstants.m */; };
 		83977C5017A2F31C00770AD7 /* PSGraphScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83977C4F17A2F31C00770AD7 /* PSGraphScrollViewController.m */; };
 		F8479EB217A0936A000F68F8 /* PSHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8479EB117A0936A000F68F8 /* PSHeaderViewController.m */; };
 		F85481AD17A1F2CC0013BF2D /* PSStoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F85481AC17A1F2CC0013BF2D /* PSStoryView.m */; };
@@ -93,6 +94,8 @@
 		646ED610179F4BA100BF997C /* PSGraphSelectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphSelectionTableViewCell.m; sourceTree = "<group>"; };
 		648A045017A04A3800DD0250 /* UIColor+PSUIColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PSUIColorPalette.h"; sourceTree = "<group>"; };
 		648A045117A04A3800DD0250 /* UIColor+PSUIColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PSUIColorPalette.m"; sourceTree = "<group>"; };
+		6496A6B917A6CFF50015A624 /* PSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSConstants.h; sourceTree = "<group>"; };
+		6496A6BA17A6CFF50015A624 /* PSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSConstants.m; sourceTree = "<group>"; };
 		83977C4E17A2F31C00770AD7 /* PSGraphScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSGraphScrollViewController.h; sourceTree = "<group>"; };
 		83977C4F17A2F31C00770AD7 /* PSGraphScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSGraphScrollViewController.m; sourceTree = "<group>"; };
 		83FDCEDB17A0ABAE00B177B9 /* PSFeedEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSFeedEnums.h; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				646ED60D179F48B700BF997C /* PSNavigationController.m */,
 				646ED5A7179F3B9600BF997C /* Images.xcassets */,
 				646ED59C179F3B9600BF997C /* Supporting Files */,
+				6496A6B917A6CFF50015A624 /* PSConstants.h */,
+				6496A6BA17A6CFF50015A624 /* PSConstants.m */,
 			);
 			path = PSFrontend;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				F8F0ADB017A09EB600F8122E /* PSStoryContentViewController.m in Sources */,
 				83977C5017A2F31C00770AD7 /* PSGraphScrollViewController.m in Sources */,
 				F8C98BCD17A05C4E00059BF4 /* PSFeedStoryHeader.m in Sources */,
+				6496A6BB17A6CFF50015A624 /* PSConstants.m in Sources */,
 				6416AD1D17A0FEB80090F883 /* PSGraphViewController.m in Sources */,
 				646ED60E179F48B700BF997C /* PSNavigationController.m in Sources */,
 				F8C98BCB17A05C4E00059BF4 /* PSFeedStoryCell.m in Sources */,

@@ -10,14 +10,10 @@
 #import "PSDayTableViewController.h"
 #import "PSGraphSelectionTableViewController.h"
 #import "PSGraphSCrollViewController.h"
+
 #import "UIColor+PSUIColorPalette.h"
 
-static CGFloat padding = 12;
-static CGFloat zero = 0.0;
-static CGFloat paddingViewOriginY = 64;
-static CGFloat tableViewOriginY = 65;
-static CGFloat tableViewHeight = 291;
-static CGFloat graphHeight = 212;
+#import "PSConstants.h"
 
 @interface PSGraphViewController ()
 
@@ -49,9 +45,9 @@ static CGFloat graphHeight = 212;
 //    CGFloat graphSelectionTableViewHeight = [_graphSelectionTableViewController tableViewHeight];
 
     CGRect graphViewFrame = [[self view] frame];
-    CGRect paddingViewFrame = CGRectMake(zero, zero, graphViewFrame.size.width, graphViewFrame.size.height - graphHeight - tableViewOriginY);
-    CGRect contentViewFrame = CGRectMake(zero, zero, paddingViewFrame.size.width, paddingViewFrame.size.height);
-    CGRect graphSelectionTableViewFrame = CGRectMake(zero, zero, contentViewFrame.size.width, contentViewFrame.size.height);
+    CGRect paddingViewFrame = CGRectMake(GLOBAL_ZERO, GLOBAL_ZERO, graphViewFrame.size.width, graphViewFrame.size.height - GRAPH_VIEW_HEIGHT - GS_TABLE_VIEW_ORIGIN_Y);
+    CGRect contentViewFrame = CGRectMake(GLOBAL_ZERO, GLOBAL_ZERO, paddingViewFrame.size.width, paddingViewFrame.size.height);
+    CGRect graphSelectionTableViewFrame = CGRectMake(GLOBAL_ZERO, GLOBAL_ZERO, contentViewFrame.size.width, contentViewFrame.size.height);
 
 
     _paddingView = [[UIScrollView alloc] initWithFrame: paddingViewFrame];
@@ -84,7 +80,7 @@ static CGFloat graphHeight = 212;
     
     //Add Month scroll view:
     PSGraphScrollViewController *scrollViewController = [[PSGraphScrollViewController alloc] init];
-    [scrollViewController setFrame:CGRectMake(zero, contentViewFrame.size.height + 1, contentViewFrame.size.width, graphHeight)];
+    [scrollViewController setFrame:CGRectMake(GLOBAL_ZERO, contentViewFrame.size.height + 1, contentViewFrame.size.width, GRAPH_VIEW_HEIGHT)];
     [scrollViewController setBackgroundColor:[UIColor navigationBarColor]];
     [[self view] addSubview:scrollViewController];
 }

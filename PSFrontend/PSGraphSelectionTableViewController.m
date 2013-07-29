@@ -10,9 +10,9 @@
 #import "PSGraphSelectionTableViewCell.h"
 #import "UIColor+PSUIColorPalette.h"
 
-static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
-static int NUM_ROWS = 15;
-static int MAX_CELLS_CHECKED = 3;
+#import "PSConstants.h"
+
+static NSString *graphSelectionCellIdentifier = @"PSGraphSelectionTableViewCell";
 
 @interface PSGraphSelectionTableViewController ()
 {
@@ -25,7 +25,7 @@ static int MAX_CELLS_CHECKED = 3;
 {
     self = [super initWithStyle:style];
     if (self) {
-        [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
+        [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:graphSelectionCellIdentifier];
         self.cellData = [[NSMutableArray alloc] init];
         self.numCellsChecked = 0;
     }
@@ -73,7 +73,7 @@ static int MAX_CELLS_CHECKED = 3;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PSGraphSelectionTableViewCell *cell = (PSGraphSelectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    PSGraphSelectionTableViewCell *cell = (PSGraphSelectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:graphSelectionCellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
     cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now.
@@ -138,7 +138,7 @@ static int MAX_CELLS_CHECKED = 3;
 - (int)nextAvailableCheckmark
 {
     int currentCheckmark;
-    for (currentCheckmark = 1; currentCheckmark  < MAX_CELLS_CHECKED; currentCheckmark ++) {
+    for (currentCheckmark = 1; currentCheckmark < MAX_CELLS_CHECKED; currentCheckmark ++) {
         BOOL found = NO;
         NSString *currentCheckmarkText = [NSString stringWithFormat:@"%d", currentCheckmark ];
         for (int j = 0; j < NUM_ROWS; j++) {

@@ -8,7 +8,7 @@
 
 #import "PSGraphSelectionTableViewCell.h"
 
-static CGFloat padding = 12;
+#import "PSConstants.h"
 
 @implementation PSGraphSelectionTableViewCell
 
@@ -27,19 +27,19 @@ static CGFloat padding = 12;
     self.checkmarkGreen = [UIImage imageNamed:@"checkmarkGreen"];
     self.checkmarkClosed = [UIImage imageNamed:@"checkmarkClosed"];
     
-    self.thumbnailView = [[UIImageView alloc] initWithFrame:CGRectMake(padding, 8, 16, 16)];
+    self.thumbnailView = [[UIImageView alloc] initWithFrame:CGRectMake(GLOBAL_PADDING, 8, 16, 16)];
     [self.thumbnailView setImage:self.thumbnail];
     [self addSubview:self.thumbnailView];
     
-    self.checkmarkView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width - 16 - padding, 8, 16, 16)];
+    self.checkmarkView = [[UIImageView alloc] initWithFrame:CGRectMake(self.frame.size.width - 16 - GLOBAL_PADDING, 8, 16, 16)];
     [self addSubview:self.checkmarkView];
     
     return self;
 }
 
 - (void)setFrame:(CGRect)frame {
-    frame.origin.x += padding;
-    frame.size.width -= padding * 2;
+    frame.origin.x += GLOBAL_PADDING;
+    frame.size.width -= GLOBAL_PADDING * 2;
     [super setFrame:frame];
 }
 
