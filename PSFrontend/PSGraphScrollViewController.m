@@ -1,14 +1,14 @@
 //
-//  PSGraphMonthViewController.m
+//  PSGraphScrollViewController.m
 //  PSFrontend
 //
 //  Created by Jesse Chand on 7/26/13.
 //  Copyright (c) 2013 Pusheen. All rights reserved.
 //
 
-#import "PSGraphMonthViewController.h"
+#import "PSGraphScrollViewController.h"
 
-@implementation PSGraphMonthViewController
+@implementation PSGraphScrollViewController
 
 - (id)initWithFrame:(CGRect)frame
 {

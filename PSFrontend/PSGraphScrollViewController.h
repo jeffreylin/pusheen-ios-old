@@ -1,5 +1,5 @@
 //
-//  PSGraphMonthViewController.h
+//  PSGraphScrollViewController.h
 //  PSFrontend
 //
 //  Created by Jesse Chand on 7/26/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSGraphMonthViewController : UIScrollView 
+@interface PSGraphScrollViewController : UIScrollView
 
 @end

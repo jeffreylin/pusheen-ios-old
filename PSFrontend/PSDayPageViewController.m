@@ -20,14 +20,12 @@
     self = [super initWithTransitionStyle:style navigationOrientation:navigationOrientation options:options];
     if (self) {
         // Custom initialization
-        NSLog(@"flag1");
         PSDayTableViewController *pageZero = [PSDayTableViewController psDayTableViewControllerForPageIndex:0];
         
         if (pageZero != nil)
         {
             // assign the first page to the pageViewController (our rootViewController)
             self.dataSource = self;
-            NSLog(@"%@", self.dataSource);
             [super setViewControllers:@[pageZero]
                             direction:UIPageViewControllerNavigationDirectionForward
                              animated:NO

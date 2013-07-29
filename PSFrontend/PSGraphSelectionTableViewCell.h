@@ -7,12 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PSGraphSelectionTableViewController.h"
 
 @interface PSGraphSelectionTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) UIColor *color;
 
 @property UIImage* thumbnail;
+@property UIImage* checkmark;
+@property UIImage* checkmarkBlue;
+@property UIImage* checkmarkRed;
+@property UIImage* checkmarkGreen;
+@property UIImage* checkmarkClosed;
 @property UIImageView* thumbnailView;
+@property UIImageView* checkmarkView;
 
 @end

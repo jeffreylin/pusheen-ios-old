@@ -8,27 +8,26 @@
 
 #import "PSGraphSelectionTableViewController.h"
 #import "PSGraphSelectionTableViewCell.h"
-
 #import "UIColor+PSUIColorPalette.h"
+
 static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
+static int NUM_ROWS = 15;
+static int MAX_CELLS_CHECKED = 3;
 
-
-
-
-@interface PSGraphSelectionTableViewController () {
+@interface PSGraphSelectionTableViewController ()
+{
 }
-
-
 @end
 
 @implementation PSGraphSelectionTableViewController
-
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         [[self tableView] registerClass:[PSGraphSelectionTableViewCell class] forCellReuseIdentifier:cellIdentifier];
+        self.cellData = [[NSMutableArray alloc] init];
+        self.numCellsChecked = 0;
     }
     return self;
 }
@@ -47,9 +46,6 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
     [(UITableView *) [self tableView] setAllowsMultipleSelection:YES];
     [(UITableView *) [self tableView] setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, -2)];
     [(UITableView *) [self tableView] setSeparatorColor:[UIColor separatorColor]];
-
-
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,30 +65,122 @@ static NSString *cellIdentifier = @"PSGraphSelectionTableViewCell";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 10;
+    for (int i = 0; i < NUM_ROWS; i++) {
+        [self.cellData addObject:@"0"];
+    }
+    return NUM_ROWS;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    PSGraphSelectionTableViewCell *cell = (PSGraphSelectionTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-//    cell.textLabel.backgroundColor = [UIColor redColor];
-//    [cell setAccessoryType:UITableViewCellAccessoryNone];
     cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
-    cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now -
+    cell.textLabel.text = [NSString stringWithFormat:@"      Test Category %d", [indexPath row]];  //Spacing is a hack right now.
+    
+    //Update images.
+    if ([self.cellData[indexPath.row] isEqual: @"-1"]) {
+        cell.checkmarkView.image = cell.checkmarkClosed;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+    } else if ([self.cellData[indexPath.row] isEqual: @"0"]) {
+        cell.checkmarkView.image = cell.checkmark;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+    } else if ([self.cellData[indexPath.row] isEqual: @"1"]) {
+        cell.checkmarkView.image = cell.checkmarkBlue;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+    } else if ([self.cellData[indexPath.row] isEqual: @"2"]) {
+        cell.checkmarkView.image = cell.checkmarkRed;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+    } else if ([self.cellData[indexPath.row] isEqual: @"3"]) {
+        cell.checkmarkView.image = cell.checkmarkGreen;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+    }
 
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.numCellsChecked < MAX_CELLS_CHECKED) {
+        self.numCellsChecked++;
+        
+        NSString *dataValue = [NSString stringWithFormat:@"%d", [self nextAvailableCheckmark]];
+        [self.cellData setObject:dataValue atIndexedSubscript:indexPath.row];
+        
+        if (self.numCellsChecked == MAX_CELLS_CHECKED) {
+            for (int i = 0; i < NUM_ROWS; i++) {
+                if ([self.cellData[i] isEqual: @"0"]) {
+                    [self.cellData replaceObjectAtIndex:i withObject:@"-1"];
+                }
+            }
+        }
+    }
+    [self updateCellImage];
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (![self.cellData[indexPath.row] isEqual:@"0"] && ![self.cellData[indexPath.row] isEqual:@"-1"] ) {
+        [self.cellData replaceObjectAtIndex:indexPath.row withObject:@"0"];
+        self.numCellsChecked--;
+        
+        //Reset blocked checkboxes into open checkboxes.
+        if (self.numCellsChecked < MAX_CELLS_CHECKED) {
+            for (int i = 0; i < NUM_ROWS; i++) {
+                if ([self.cellData[i] isEqual: @"-1"]) {
+                    [self.cellData replaceObjectAtIndex:i withObject:@"0"];
+                }
+            }
+        }
+    }
+    [self updateCellImage];
+}
+
+- (int)nextAvailableCheckmark
+{
+    int currentCheckmark;
+    for (currentCheckmark = 1; currentCheckmark  < MAX_CELLS_CHECKED; currentCheckmark ++) {
+        BOOL found = NO;
+        NSString *currentCheckmarkText = [NSString stringWithFormat:@"%d", currentCheckmark ];
+        for (int j = 0; j < NUM_ROWS; j++) {
+            if ([self.cellData[j] isEqual:currentCheckmarkText]) {
+                found = YES;
+                break;
+            }
+        }
+        if (found == NO){
+            return currentCheckmark;
+        }
+    }
+    return currentCheckmark ;
+}
+
+- (void)updateCellImage
+{
+    for (PSGraphSelectionTableViewCell *cell in self.tableView.visibleCells) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        
+        if ([self.cellData[indexPath.row] isEqual: @"-1"]) {
+            cell.checkmarkView.image = cell.checkmarkClosed;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+        } else if ([self.cellData[indexPath.row] isEqual: @"0"]) {
+            cell.checkmarkView.image = cell.checkmark;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.0f];
+        } else if ([self.cellData[indexPath.row] isEqual: @"1"]) {
+            cell.checkmarkView.image = cell.checkmarkBlue;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+        } else if ([self.cellData[indexPath.row] isEqual: @"2"]) {
+            cell.checkmarkView.image = cell.checkmarkRed;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+        } else if ([self.cellData[indexPath.row] isEqual: @"3"]) {
+            cell.checkmarkView.image = cell.checkmarkGreen;
+            cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f];
+        }
+    }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // height of rows
     return 32;
 }
 

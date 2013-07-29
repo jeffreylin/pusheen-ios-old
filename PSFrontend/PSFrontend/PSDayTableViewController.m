@@ -63,7 +63,7 @@
     
     [[self view] setBackgroundColor:[UIColor viewBackgroundColor]];
     [self.navigationController.navigationBar setTranslucent:NO];
-    //[self.tableView setSeparatorColor:[UIColor clearColor]];
+    [self.tableView setSeparatorColor:[UIColor clearColor]];
     
 
     UIImage *imgNavLog = [UIImage imageNamed:@"navLog"];
@@ -88,8 +88,6 @@
 
 - (void)buttonPressed
 {
-    NSLog(@"Switching to Graph View.");
-    
     PSGraphViewController *graphViewController = [[PSGraphViewController alloc] init];
     [self.navigationController popViewControllerAnimated:NO];
     [self.navigationController pushViewController:graphViewController animated:NO];

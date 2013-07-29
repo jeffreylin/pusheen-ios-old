@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PSGraphSelectionTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
-
-
+@property NSMutableArray* cellData;
+@property int numCellsChecked;
 @end

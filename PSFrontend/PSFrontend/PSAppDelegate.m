@@ -22,18 +22,11 @@
 
     // AppDelegate should probably only contain the navController its rootViewController
 
-
-    //CGRect screenRect = [[self window] bounds];
-    //UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
-    //[scrollView setPagingEnabled:YES];
-    //[[self window] addSubview:scrollView];
-    
     
     PSDayPageViewController *feedViewController = [[PSDayPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
 
     // Comment out to swap between Feed View and Graph View:
     PSNavigationController *navController = [[PSNavigationController alloc] initWithRootViewController:feedViewController];
-
 
     [[self window] setRootViewController:navController];
     [self.window makeKeyAndVisible];
