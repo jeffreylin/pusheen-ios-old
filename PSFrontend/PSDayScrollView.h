@@ -13,6 +13,5 @@
 @property (nonatomic) NSUInteger index;
 
 + (NSUInteger)tableCount;
-+ (UITableView *)tableAtIndex:(NSUInteger)index;
 
 @end
